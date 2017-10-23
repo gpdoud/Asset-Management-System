@@ -155,11 +155,18 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AssetsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LocationsController.cs" />
+    <Compile Include="Controllers\ServiceRecordsController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Controllers\VehiclesController.cs" />
+    <Compile Include="Controllers\VendorsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Asset.cs" />
+    <Compile Include="Models\AssetManagementSystemContext.cs" />
     <Compile Include="Models\Document.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\ServiceRecord.cs" />
@@ -211,6 +218,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Assets\" />
+    <Folder Include="Views\Locations\" />
+    <Folder Include="Views\ServiceRecords\" />
+    <Folder Include="Views\Users\" />
+    <Folder Include="Views\Vehicles\" />
+    <Folder Include="Views\Vendors\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
