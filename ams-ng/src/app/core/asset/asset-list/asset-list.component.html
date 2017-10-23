@@ -1,0 +1,35 @@
+<menu-comp></menu-comp>
+<div>
+
+	<div>
+		<span class="PageTitle">Asset List</span>
+		<span class="CreateNew"><a routerLink="/assets/add">Add New</a></span>
+	</div>
+
+	<table class="table" *ngIf="assets">
+	<tr>
+		<th>VendorIdNumber</th>
+		<th>Name</th>
+		<th>Price</th>
+		<th>Unit</th>
+		<th>PhotoPath</th>
+		<th>Actions</th>
+	</tr>
+	<tr *ngFor="let asset of assets">
+		<td>{{asset.VendorIdNumber}}</td>
+		<td>{{asset.Name}}</td>
+		<td>{{asset.Price}}</td>
+		<td>{{asset.Unit}}</td>
+		<td>{{asset.PhotoPath}}</td>
+			
+		<td>
+			<a routerLink="/assets/detail/{{asset.Id}}">Detail</a>
+			<a routerLink="/assets/edit/{{asset.Id}}">Edit</a>
+
+		</td>
+	</tr>
+	</table>
+
+</div>
+
+
