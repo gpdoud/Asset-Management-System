@@ -5,7 +5,6 @@ import 'rxjs/add/operator/toPromise';
 
 import { Vendor } from '../../models/Vendor';
 import { VendorService } from '../../../shared/services/vendor.service';
-import { User } from '../../models/User';
 
 @Component({
   selector: 'vendor-list',

@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 
 import { VendorService } from '../../../shared/services/vendor.service';
 import { Vendor } from '../../models/Vendor';
-import { User } from '../../models/User';
 
 @Component({
 

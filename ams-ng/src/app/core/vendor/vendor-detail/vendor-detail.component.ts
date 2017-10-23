@@ -3,7 +3,6 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 import { Vendor } from '../../models/Vendor';
 import { VendorService } from '../../../shared/services/vendor.service';
-import { User } from '../../models/User';
 
 import 'rxjs/add/operator/switchMap';
 
