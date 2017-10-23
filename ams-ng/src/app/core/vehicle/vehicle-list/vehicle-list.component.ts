@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import 'rxjs/add/operator/toPromise';
 
 import { Vehicle } from '../../models/Vehicle';
-import { VehicleService } from '../../services/vehicle.service';
+import { VehicleService } from '../../../shared/services/vehicle.service';
 
 @Component({
   selector: 'app-vehicle-list',

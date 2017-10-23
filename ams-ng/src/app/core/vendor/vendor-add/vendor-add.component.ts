@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { VendorService } from '../../services/vendor.service';
+import { VendorService } from '../../../shared/services/vendor.service';
 import { Vendor } from '../../models/Vendor';
-import { SystemService } from '../../services/system.service';
 import { User } from '../../models/User';
 
 @Component({
@@ -27,15 +26,11 @@ export class VendorAddComponent implements OnInit {
 		);
 	}
 
- constructor(private SystemSvc: SystemService, private VendorSvc: VendorService, 
+ constructor(private VendorSvc: VendorService, 
   				private router: Router) { }
 
  ngOnInit() {
-  	if(!this.SystemSvc.IsLoggedIn()) {
-  		this.router.navigateByUrl("\login");
-  	} else {
-  		this.loggedInUser = this.SystemSvc.getLoggedIn();
-  	}
+
 
   }
 

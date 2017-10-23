@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 import { Vendor } from '../../models/Vendor';
-import { VendorService } from '../../services/vendor.service';
-import { SystemService } from '../../services/system.service';
+import { VendorService } from '../../../shared/services/vendor.service';
 import { User } from '../../models/User';
 
 import 'rxjs/add/operator/switchMap';
@@ -38,16 +37,12 @@ export class VendorDetailComponent implements OnInit {
 		this.router.navigate(['/vendors/edit/'+this.vendor.Id]);
 	}
 
- constructor(private SystemSvc: SystemService, private VendorSvc: VendorService, 
+ constructor(private VendorSvc: VendorService, 
             private router: Router, 
   			private route: ActivatedRoute) { }
 
  ngOnInit() {
-  	if(!this.SystemSvc.IsLoggedIn()) {
-  		this.router.navigateByUrl("\login");
-  	} else {
-  		this.loggedInUser = this.SystemSvc.getLoggedIn();
-  	}
+
 
 	this.route.paramMap
 		.switchMap((params: ParamMap) =>

@@ -10,6 +10,14 @@ const approutes: Routes = [
 	{ path: 'about', component: core.AboutComponent },
 	{ path: 'help', component: core.HelpComponent },
 	{ path: 'home', component: core.HomeComponent },
+  { path: 'vehicles', component: core.VehicleListComponent },
+  { path: 'vehicles/add', component: core.VehicleAddComponent },
+  { path: 'vehicles/detail', component: core.VehicleDetailComponent },
+  { path: 'vehicles/edit', component: core.VehicleEditComponent },
+  { path: 'vendors', component: core.VendorListComponent },
+  { path: 'vendors/add', component: core.VendorAddComponent },
+  { path: 'vendors/detail', component: core.VendorDetailComponent },
+  { path: 'vendors/edit', component: core.VendorEditComponent },
 	{ path: '**', component: core.HomeComponent }
 ];
 

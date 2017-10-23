@@ -4,8 +4,7 @@ import { Router } from '@angular/router';
 import 'rxjs/add/operator/toPromise';
 
 import { Vendor } from '../../models/Vendor';
-import { VendorService } from '../../services/vendor.service';
-import { SystemService } from '../../services/system.service';
+import { VendorService } from '../../../shared/services/vendor.service';
 import { User } from '../../models/User';
 
 @Component({
@@ -24,15 +23,10 @@ export class VendorListComponent implements OnInit {
 			.then(resp => this.vendors = resp);
 	}
 
- constructor(private SystemSvc: SystemService, private VendorSvc: VendorService, 
+ constructor(private VendorSvc: VendorService, 
             private router: Router) { }
 
  ngOnInit() {
-  	if(!this.SystemSvc.IsLoggedIn()) {
-  		this.router.navigateByUrl("\login");
-  	} else {
-  		this.loggedInUser = this.SystemSvc.getLoggedIn();
-  	}
 
   	this.getVendors();
   }
