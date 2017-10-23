@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 
 import { Asset } from '../../shared/models/asset';
 
-const urlBase = 'http://localhost:57177/';
+const urlBase = 'http://localhost:54154/';
 const mvcCtrl = 'Assets/';
 const url: string = urlBase + mvcCtrl;
 
@@ -15,14 +15,46 @@ const url: string = urlBase + mvcCtrl;
 @Injectable()
 export class AssetService {
 
-  constructor(private http: Http) {}
+  assets: Asset[] = [
+    {Id: 1, VendorIdNumber: "2", Name: "3", Price: 4, Unit: "5", PhotoPath: "6"},
+     {Id: 1, VendorIdNumber: "2", Name: "3", Price: 4, Unit: "5", PhotoPath: "6"},
+    {Id: 1, VendorIdNumber: "2", Name: "3", Price: 4, Unit: "5", PhotoPath: "6"}
+   
+  ];
 
+  constructor(private http: Http) {}
+    liststatic(): Asset[] {
+     return this.assets; 
+    } 
+    
   	list(): Promise<Asset[]> {
    			return this.http.get(url+'List')
    				.toPromise()
    				.then(resp => resp.json() as Asset[])
    				.catch(this.handleError);
    		}
+
+	  get(id): Promise<Asset> {
+   			return this.http.get(url+'Get/'+id)
+   				.toPromise()
+   				.then(resp => resp.json() as Asset)
+   				.catch(this.handleError);
+}
+
+  add(asset:Asset): Promise<any> {
+        return this.http.post(url+'Add', asset)
+        .toPromise()
+        .then(resp => resp.json() || {})
+        .catch(this.handleError);
+      }
+
+ 	remove(asset:Asset): Promise<any> {
+        return this.http.post(url+'Remove', asset)
+        .toPromise()
+        .then(resp => resp.json() || {})
+        .catch(this.handleError);
+      }
+
 
 	private handleError(error: any): Promise<any> {  //returns a Promise of any type
   	console.error('An error has occurred', error);

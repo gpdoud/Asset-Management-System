@@ -1,0 +1,24 @@
+
+<div>
+
+	<div>
+		<span class="PageTitle">Asset Detail</span>
+		<span class="CreateNew"><a routerLink="/assets/add">Add New</a></span>
+	</div>
+
+	<table class="table" *ngIf="asset">
+	
+		<tr><th> VendorIdNumber</th><td>{{asset.VendorIdNumber}}</td></tr>
+		<tr><th> Name</th><td>{{asset.Name}}</td></tr>
+		<tr><th> Price</th><td>{{asset.Price}}</td></tr>
+		<tr><th> Unit</th><td>{{asset.Unit}}</td></tr>
+		<tr><th> PhotoPath</th><td>{{asset.PhotoPath}}</td></tr>
+		
+		
+	</table>
+
+	<div class="text-center">
+		<button class="btn btn-danger" (click)="remove()">Delete</button>
+	</div>
+
+</div>

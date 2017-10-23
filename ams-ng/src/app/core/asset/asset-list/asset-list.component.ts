@@ -13,8 +13,12 @@ import { AssetService } from '../../../shared/services/asset.service';
 export class AssetListComponent implements OnInit {
 
 assets: Asset[];
+  getAssets(): void {
+    this.assets = this.AssetSvc.liststatic()
 
-	getAssets(): void {
+  }
+
+	getAssetsx(): void {
 		this.AssetSvc.list()
 			.then(resp => this.assets = resp);  //array of assets gets stored in this variable (resp)
 	}
