@@ -131,7 +131,11 @@ namespace AssetManagementSystem.Controllers
             return new JsonNetResult { Data = db.Users.ToList() };
         }
         
-        // Remove
+        /// <summary>
+        /// HTTP GET Remove user from the database
+        /// </summary>
+        /// <param name="id">User.Id from URL</param>
+        /// <returns>JSON Msg</returns>
         public ActionResult Remove(int? id)
         {
             // did we get a valid id?
