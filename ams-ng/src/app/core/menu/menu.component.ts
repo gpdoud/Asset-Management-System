@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { SystemService } from '../../shared/services/system.service';
-import { User } from '../models/User';
+import { User } from '../../shared/models/User';
 import { Menu } from './menu';
 
 @Component({
-  selector: 'app-menu',
+  selector: 'menu-comp',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
