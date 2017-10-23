@@ -1,0 +1,27 @@
+<app-menu></app-menu>
+<div class="MainContent form-horizontal">
+
+	<div>
+		<span class="PageTitle">Vehicle Detail</span>
+		<span class="CreateNew"><a routerLink="/vehicles/add">Add New</a></span>
+	</div>
+
+	<div *ngIf="vehicle == null">Searching...</div>
+
+	<div *ngIf="vehicle">
+
+		<table class="table">
+			<tr><th>Make</th><td>{{vehicle.Make}}</td></tr>
+			<tr><th>Model</th><td>{{vehicle.Model}}</td></tr>
+			<tr><th>VIN</th><td>{{vehicle.VIN}}</td></tr>
+		</table>
+
+		<div class="text-center">
+			<button class="btn btn-warning" (click)="edit()">Edit</button> |
+			<button class="btn btn-danger" (click)="toggleVerifyDelete()">Delete</button>
+			<span *ngIf="verifyDelete"> | <button class="btn btn-danger" (click)="remove()">Verify</button></span>
+		</div>
+
+	</div>
+
+</div>
