@@ -6,10 +6,14 @@ import { AppRoutingModule } from '@app/app-routing.module';
 import { CoreModule } from '@app/core/core.module';
 
 import { AppComponent } from '@app/app.component';
+import { AssetListComponent } from './core/asset/asset-list/asset-list.component';
+import { AssetService } from './shared/services/asset.service'
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AssetListComponent
   ],
   imports: [
     BrowserModule,
@@ -17,7 +21,9 @@ import { AppComponent } from '@app/app.component';
     AppRoutingModule,
     CoreModule
   ],
-  providers: [],
+  providers: [
+  AssetService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
