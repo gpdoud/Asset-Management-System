@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { SystemService } from '../../shared/services/system.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private SystemSvc: SystemService, private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit() { 
+  	// if(!this.SystemSvc.isLoggedIn()) {
+  	// 	this.router.navigateByUrl("/login");
+  	}
+  	// this.loggedInUser = this.SystemSvc.getLoggedIn();
   }
 
-}
