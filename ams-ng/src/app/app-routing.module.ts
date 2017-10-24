@@ -7,6 +7,7 @@ import * as core from '@app/core';
 import { AssetListComponent } from './core/asset/asset-list/asset-list.component';
 import { AssetDetailComponent } from './core/asset/asset-detail/asset-detail.component';
 import { AssetAddComponent } from './core/asset/asset-add/asset-add.component';
+import { AssetEditComponent } from './core/asset/asset-edit/asset-edit.component';
 
 const approutes: Routes = [
 	{ path: '', redirectTo: '/', pathMatch: "full" },
@@ -14,6 +15,7 @@ const approutes: Routes = [
 	{ path: 'help', component: core.HelpComponent },
 	{ path: 'home', component: core.HomeComponent },
 	{ path: 'assets', component: AssetListComponent},
+	{ path: 'assets/edit/:id', component: AssetEditComponent},
   { path: 'assets/detail/:id', component: AssetDetailComponent},
   { path: 'assets/add', component: AssetAddComponent},
   { path: '**', component: core.HomeComponent },

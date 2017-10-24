@@ -31,10 +31,17 @@ export class AssetService {
    				.toPromise()
    				.then(resp => resp.json() as Asset)
    				.catch(this.handleError);
-}
+      }
 
-  add(asset:Asset): Promise<any> {
+    add(asset:Asset): Promise<any> {
         return this.http.post(url+'Add', asset)
+        .toPromise()
+        .then(resp => resp.json() || {})
+        .catch(this.handleError);
+      }
+
+    change(asset:Asset): Promise<any> {
+        return this.http.post(url+'Change', asset)
         .toPromise()
         .then(resp => resp.json() || {})
         .catch(this.handleError);
