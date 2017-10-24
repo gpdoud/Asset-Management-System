@@ -13,10 +13,10 @@ const approutes: Routes = [
 	{ path: 'about', component: core.AboutComponent },
 	{ path: 'help', component: core.HelpComponent },
 	{ path: 'home', component: core.HomeComponent },
-	{ path: '**', component: core.HomeComponent },
-  { path: 'assets', component: AssetListComponent},
+	{ path: 'assets', component: AssetListComponent},
   { path: 'assets/detail/:id', component: AssetDetailComponent},
-  { path: 'assets/add', component: AssetAddComponent}
+  { path: 'assets/add', component: AssetAddComponent},
+  { path: '**', component: core.HomeComponent },
 ];
 
 @NgModule({

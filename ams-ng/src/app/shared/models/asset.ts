@@ -1,7 +1,7 @@
 export class Asset {
 	
 	Id: number;
-	VendorIdNumber: string;
+	Vendor: string;
 	Name: string;
 	Price: number;
 	Unit: string;
@@ -10,7 +10,7 @@ export class Asset {
 		
 	constructor(
 		Id: number,
-		VendorIdNumber: string,
+		Vendor: string,
 		Name: string,
 		Price: number,
 		Unit: string,
@@ -20,7 +20,7 @@ export class Asset {
 
 	 {
 	 	this.Id = Id;
-	 	this.VendorIdNumber = VendorIdNumber;
+	 	this.Vendor = Vendor;
 	 	this.Name = Name;
 	 	this.Price = Price;
 	 	this.Unit = Unit;
