@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -7,12 +8,15 @@ namespace AssetManagementSystem.Models
 {
     public class Asset
     {
+        [Required]
         public int Id { get; set; }
 
-        public int VendorIdNumber { get; set; }
+        public string Vendor { get; set; }
 
+        [Required]
         public string Name { get; set; }
 
+        [Required]
         public decimal Price { get; set; }
 
         public string Unit { get; set; }
@@ -22,7 +26,7 @@ namespace AssetManagementSystem.Models
         public void Copy(Asset asset)
         {
             Id = asset.Id;
-            VendorIdNumber = asset.VendorIdNumber;
+            Vendor = asset.Vendor;
             Name = asset.Name;
             Price = asset.Price;
             Unit = asset.Unit;

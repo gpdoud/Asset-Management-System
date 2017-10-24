@@ -28,7 +28,5 @@ namespace AssetManagementSystem.Models
         public System.Data.Entity.DbSet<AssetManagementSystem.Models.Location> Locations { get; set; }
 
         public System.Data.Entity.DbSet<AssetManagementSystem.Models.ServiceRecord> ServiceRecords { get; set; }
-
-        public System.Data.Entity.DbSet<AssetManagementSystem.Models.Vendor> Vendors { get; set; }
     }
 }

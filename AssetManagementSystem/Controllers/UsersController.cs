@@ -86,7 +86,7 @@ namespace AssetManagementSystem.Controllers
                 }
 
                 // everything seems to have gone well
-                return Json(new Msg { Result = "Success", Message = $"User.Change(): {numChanges} record(s) updated." });
+                return Json(new Msg { Result = "Success", Message = $"User.Change(): {numChanges} record(s) updated." }, JsonRequestBehavior.AllowGet);
             }
 
             // the ModelState is invalid
@@ -171,7 +171,7 @@ namespace AssetManagementSystem.Controllers
             }
 
             // user deleted
-            return Json(new Msg { Result = "Success", Message = $"User.Remove(): {numChanges} record(s) deleted." });
+            return Json(new Msg { Result = "Success", Message = $"User.Remove(): {numChanges} record(s) deleted." }, JsonRequestBehavior.AllowGet);
         }
 
         protected override void Dispose(bool disposing)
