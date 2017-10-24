@@ -10,10 +10,16 @@ import {VehicleDetailComponent} from './core/vehicle/vehicle-detail/vehicle-deta
 import {VehicleEditComponent} from './core/vehicle/vehicle-edit/vehicle-edit.component';
 import {VehicleListComponent} from './core/vehicle/vehicle-list/vehicle-list.component';
 
+import {VendorAddComponent} from './core/vendor/vendor-add/vendor-add.component';
+import {VendorDetailComponent} from './core/vendor/vendor-detail/vendor-detail.component';
+import {VendorEditComponent} from './core/vendor/vendor-edit/vendor-edit.component';
+import {VendorListComponent} from './core/vendor/vendor-list/vendor-list.component';
+
 import {AssetListComponent} from './core/asset/asset-list/asset-list.component';
 import {AssetDetailComponent} from './core/asset/asset-detail/asset-detail.component';
 import {AssetAddComponent} from './core/asset/asset-add/asset-add.component';
 
+import {VendorService} from './shared/services/vendor.service'
 import {VehicleService} from './shared/services/vehicle.service'
 
 const approutes: Routes = [

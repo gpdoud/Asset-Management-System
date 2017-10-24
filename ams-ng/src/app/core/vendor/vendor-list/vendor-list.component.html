@@ -1,0 +1,36 @@
+<app-menu></app-menu>
+<div class="MainContent form-horizontal">
+
+	<div>
+		<span class="PageTitle">Vendors</span>
+		<span class="CreateNew"><a routerLink="/vendors/add">Add New</a></span>
+	</div>
+
+	<table class="table" *ngIf="vendors">
+		<tr>
+			<th>Code</th>
+			<th>Name</th>
+			<th>Address</th>
+			<th>City/St/Zip</th>
+			<th>Phone</th>
+			<th>Email</th>
+			<th>PreApproved</th>
+			<th>Actions</th>
+		</tr>
+		<tr *ngFor="let vendor of vendors">
+			<td>{{vendor.Code}}</td>
+			<td>{{vendor.Name}}</td>
+			<td>{{vendor.Address}}</td>
+			<td>{{vendor.City}}, {{vendor.State}} {{vendor.Zip}}</td>
+			<td>{{vendor.Phone}}</td>
+			<td>{{vendor.Email}}</td>
+			<!-- If the vendor is, or is not, a PreApproved Vendor, this will determine what is shown under those headers-->
+			<td *ngIf="vendor.PreApproved">Yes</td>
+			<td *ngIf="!vendor.PreApproved">&nbsp;</td>
+			<td>
+				<span><a routerLink="/vendors/detail/{{vendor.Id}}">Details</a></span>
+				<span><a routerLink="/vendors/edit/{{vendor.Id}}">Edit</a></span>
+			</td>
+		</tr>
+	</table>
+</div>
