@@ -1,0 +1,26 @@
+<app-menu></app-menu>
+<div class="MainContent form-horizontal">
+
+	<div>
+		<span class="PageTitle">Vehicles</span>
+		<span class="CreateNew"><a routerLink="/vehicles/add">Add New</a></span>
+	</div>
+
+	<table class="table" *ngIf="vehicles">
+		<tr>
+			<th>Make</th>
+			<th>Model</th>
+			<th>VIN</th>
+			<th>Actions</th>
+		</tr>
+		<tr *ngFor="let vehicle of vehicles">
+			<td>{{vehicle.Make}}</td>
+			<td>{{vehicle.Model}}</td>
+			<td>{{vehicle.VIN}}</td>
+			<td>
+				<span><a routerLink="/vehicles/detail/{{vehicle.Id}}">Details</a></span>
+				<span><a routerLink="/vehicles/edit/{{vehicle.Id}}">Edit</a></span>
+			</td>
+		</tr>
+	</table>
+</div>
