@@ -18,7 +18,10 @@ const approutes: Routes = [
   { path: 'vendors/add', component: core.VendorAddComponent },
   { path: 'vendors/detail', component: core.VendorDetailComponent },
   { path: 'vendors/edit', component: core.VendorEditComponent },
-	{ path: '**', component: core.HomeComponent }
+	
+  // If the path does not match any of the paths we set above, this will
+  // take the user to the HomeComponent's page
+  { path: '**', component: core.HomeComponent }
 ];
 
 @NgModule({
