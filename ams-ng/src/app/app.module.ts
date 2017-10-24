@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http'; 
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from '@app/app-routing.module';
 import { CoreModule } from '@app/core/core.module';
 
@@ -30,6 +30,7 @@ import { HomeComponent } from './core/home/home.component';
     RouterModule,
     AppRoutingModule,
     CoreModule,
+    FormsModule,
     HttpModule
   ],
   providers: [

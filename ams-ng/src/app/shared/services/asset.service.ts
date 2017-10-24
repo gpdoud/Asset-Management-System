@@ -15,17 +15,9 @@ const url: string = urlBase + mvcCtrl;
 @Injectable()
 export class AssetService {
 
-  assets: Asset[] = [
-    {Id: 1, Vendor: "2", Name: "3", Price: 4, Unit: "5", PhotoPath: "6"},
-     {Id: 1, Vendor: "2", Name: "3", Price: 4, Unit: "5", PhotoPath: "6"},
-    {Id: 1, Vendor: "2", Name: "3", Price: 4, Unit: "5", PhotoPath: "6"}
-   
-  ];
-
+  
   constructor(private http: Http) {}
-    liststatic(): Asset[] {
-     return this.assets; 
-    } 
+    
     
   	list(): Promise<Asset[]> {
    			return this.http.get(url+'List')
