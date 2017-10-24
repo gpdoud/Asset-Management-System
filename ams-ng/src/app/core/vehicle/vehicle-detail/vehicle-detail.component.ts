@@ -4,6 +4,7 @@ import 'rxjs/add/operator/toPromise';
 
 import { Vehicle } from '../../models/Vehicle';
 import { VehicleService } from '../../../shared/services/vehicle.service';
+import { Asset } from './Asset';
 
 @Component({
   selector: 'app-vehicle-detail',
@@ -11,7 +12,7 @@ import { VehicleService } from '../../../shared/services/vehicle.service';
   styleUrls: ['./vehicle-detail.component.css']
 })
 export class VehicleDetailComponent implements OnInit {
-
+	asset: Asset;
  	vehicle: Vehicle;
 	verifyDelete: boolean = false;
 

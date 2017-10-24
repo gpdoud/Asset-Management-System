@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 
 import { Vehicle } from '../models/Vehicle';
 
-const urlBase = 'http://localhost:62140/';
+const urlBase = 'http://localhost:54154/';
 const mvcCtrl = 'Vehicles/';
 const url: string = urlBase + mvcCtrl;
 

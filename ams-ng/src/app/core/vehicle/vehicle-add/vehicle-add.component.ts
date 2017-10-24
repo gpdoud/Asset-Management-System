@@ -5,6 +5,7 @@ import 'rxjs/add/operator/toPromise';
 
 import { Vehicle } from '../../models/Vehicle';
 import { VehicleService } from '../../../shared/services/vehicle.service';
+import {VehicleAsset} from '../../models/VehicleAsset';
 
 @Component({
   selector: 'app-vehicle-add',
@@ -12,7 +13,9 @@ import { VehicleService } from '../../../shared/services/vehicle.service';
   styleUrls: ['./vehicle-add.component.css']
 })
 export class VehicleAddComponent implements OnInit {
-	vehicle: Vehicle = new Vehicle(0, '', '', '');
+	asset: Asset;
+	vehicleAsset: VehicleAsset;
+	vehicle: Vehicle = new Vehicle('', '', '', '');
 	
 	add() {
 		this.VehicleSvc.add(this.vehicle).then(

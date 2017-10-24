@@ -1,21 +1,24 @@
 export class Vehicle {
 
-	Id: number;
+	// Id: number;
+	VIN: string;
 	Make: string;
 	Model: string;
-	VIN: string;	
+	Asset: Asset;	
 	
 	constructor(
-		Id: number,
+		// Id: number,
+		VIN: string,
 		Make: string,
 		Model: string,
-		VIN: string
+		Asset: Asset
 		
 	) {
-		this.Id = Id;
+		// this.Id = Id;
+		this.VIN = VIN;
 		this.Make = Make;
 		this.Model = Model;
-		this.VIN = VIN;
+		this.Asset = Asset;
 		
 	}
 }
