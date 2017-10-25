@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
-import 'rxjs/add/operator/toPromise';
-
 import { User } from '../../../shared/models/User';
 import { UserService } from '../../../shared/services/user.service';
+import 'rxjs/add/operator/toPromise';
 
 @Component({
   selector: 'app-user-list',

@@ -12,16 +12,21 @@ import { UserDetailComponent } from './core/user/user-detail/user-detail.compone
 import { UserEditComponent } from './core/user/user-edit/user-edit.component';
 import { UserAddComponent } from './core/user/user-add/user-add.component';
 
+import { LocationListComponent } from './core/location/location-list/location-list.component';
+
 const approutes: Routes = [
 	{ path: '', redirectTo: '/', pathMatch: "full" },
 	{ path: 'about', component: AboutComponent },
 	{ path: 'help', component: HelpComponent },
 	{ path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
+  
   { path: "users", component: UserListComponent },
   { path: "users/detail/:id", component: UserDetailComponent },
   { path: "users/edit/:id", component: UserEditComponent },
   { path: "users/add", component: UserAddComponent },
+
+  { path: "locations", component: LocationListComponent },
   { path: '**', component: HomeComponent },
 ];
 
