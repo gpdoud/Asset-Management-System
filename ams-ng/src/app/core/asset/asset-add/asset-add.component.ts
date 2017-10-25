@@ -10,7 +10,12 @@ import { AssetService } from '../../../shared/services/asset.service';
   styleUrls: ['./asset-add.component.css']
 })
 export class AssetAddComponent implements OnInit {
-	vehicle: Vehicle = new Vehicle("Feature", ".NET", "Bootcamp");
+	//Currently, this creates the three blank fields for a Vehicle,
+	//and then the Asset is created, with the six fields inherent to
+	//an Asset, plus the fields a Vehicle brings in
+		//Once we have additional types of assets to work with,
+		//those will also be added here, and attached to the Asset
+	vehicle: Vehicle = new Vehicle("", "", "");
 	asset: Asset = new Asset (0, '', '', 0, '', '', 'Vehicle', this.vehicle); 
 	
 	add() {

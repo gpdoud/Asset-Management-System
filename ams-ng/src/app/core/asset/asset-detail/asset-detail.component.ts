@@ -34,8 +34,8 @@ remove() {
   ngOnInit() {
   	this.route.paramMap
   			.switchMap((params: ParamMap) =>
-  				this.AssetSvc.dummydetail())
-          // this.AssetSvc.get(params.get('id')))
+  				//this.AssetSvc.dummydetail())
+          this.AssetSvc.get(params.get('id')))
   			.subscribe((asset: Asset) => this.asset = asset);
   }
 
