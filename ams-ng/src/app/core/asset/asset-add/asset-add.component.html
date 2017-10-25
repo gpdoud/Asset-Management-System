@@ -13,47 +13,80 @@
    </div>
 
 	<div class='form-group'>
-	<label class='col-md-3 control-label' for="asset-name">Name</label>
-	<div class='col-md-9'>
-		<input class='form-control' name='Name' type= 'text' id='asset-name' 
-		[(ngModel)]='asset.Name' placeholder="Name">
-	</div>
-	</div>
-
-	<div class='form-group'>
-	<label class='col-md-3 control-label' for="asset-price">Price</label>
-	<div class='col-md-9'>
-		<input class='form-control' name='Price' type= 'text' id='asset-price' 
-		[(ngModel)]='asset.Price' placeholder="Price">
-	</div>
-	</div>
-
-	<div class='form-group'>
-	<label class='col-md-3 control-label' for="asset-unit">Unit</label>
-	<div class='col-md-9'>
-		<input class='form-control' name='Unit' type= 'text' id='asset-unit' 
-		[(ngModel)]='asset.Unit' placeholder="Unit">
-	</div>
-	</div>
-
-	<div class='form-group'>
-	<label class='col-md-3 control-label' for="asset-photopath">PhotoPath</label>
-	<div class='col-md-9'>
-		<input class='form-control' name='PhotoPath' type= 'text' id='asset-photopath' 
-		[(ngModel)]='asset.PhotoPath' placeholder="PhotoPath">
-	</div>
-	</div>
-
-	
-		<div class='form-group'>
-		<button (click)='add()' id='add' class='col-md-aa col-md-offset-1 btn btn-primary'>Add</button>
+		<label class='col-md-3 control-label' for="asset-name">Name</label>
+		<div class='col-md-9'>
+			<input class='form-control' name='Name' type= 'text' id='asset-name' 
+			[(ngModel)]='asset.Name' placeholder="Name">
 		</div>
+	</div>
+
+	<div class='form-group'>
+		<label class='col-md-3 control-label' for="asset-price">Price</label>
+		<div class='col-md-9'>
+			<input class='form-control' name='Price' type= 'text' id='asset-price' 
+			[(ngModel)]='asset.Price' placeholder="Price">
+		</div>
+	</div>
+
+	<div class='form-group'>
+		<label class='col-md-3 control-label' for="asset-unit">Unit</label>
+		<div class='col-md-9'>
+			<input class='form-control' name='Unit' type= 'text' id='asset-unit' 
+			[(ngModel)]='asset.Unit' placeholder="Unit">
+		</div>
+	</div>
+
+	<div class='form-group'>
+		<label class='col-md-3 control-label' for="asset-photopath">PhotoPath</label>
+		<div class='col-md-9'>
+			<input class='form-control' name='PhotoPath' type= 'text' id='asset-photopath' 
+			[(ngModel)]='asset.PhotoPath' placeholder="PhotoPath">
+		</div>
+	</div>
+
+	<div class='form-group'>
+		<label class='col-md-3 control-label' for="asset-type">Type</label>
+		<div class='col-md-9'>
+			<input class='form-control' name='Type' type= 'text' id='asset-type' 
+			[(ngModel)]='asset.Type' placeholder="Type">
+		</div>
+	</div>
+
+	<div *ngIf="asset.Type == 'Vehicle'">
+		<div class='form-group' >
+			<label class='col-md-3  control-label' for="vehicle-vin">VIN</label>
+			<div class='col-md-9'>
+				<input class='form-control' name='VIN' type='text' id='vehicle-vin' 
+				[(ngModel)]='vehicle.VIN' placeholder="VIN">
+			</div>
+		</div>
+
+		<div class='form-group' >
+			<label class='col-md-3  control-label' for="vehicle-make">Make</label>
+			<div class='col-md-9'>
+				<input class='form-control' name='Make' type='text' id='vehicle-make' 
+				[(ngModel)]='vehicle.Make' placeholder="Make">
+			</div>
+		</div>
+
+		<div class='form-group' >
+			<label class='col-md-3  control-label' for="vehicle-model">Model</label>
+			<div class='col-md-9'>
+				<input class='form-control' name='Model' type='text' id='vehicle-model' 
+				[(ngModel)]='vehicle.Model' placeholder="Model">
+			</div>
+		</div>		
+
+	</div>
+	<div class='form-group'>
+		<button (click)='add()' id='add' class='col-md-aa col-md-offset-1 btn btn-primary'>Add</button>
+	</div>
 
 	<div class='form-group'>
 		<label class='col-md-10 col-md-offset-1 text-left'>{{message}}&nbsp;</label>
-
 	</div>
 	</form>
+
 	</div>
-	</div>
+</div>
 	

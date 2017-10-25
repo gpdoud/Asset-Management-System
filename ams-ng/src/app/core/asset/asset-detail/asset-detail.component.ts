@@ -5,6 +5,7 @@ import 'rxjs/add/operator/switchMap';
 
 import { Asset } from '../../../shared/models/asset';
 import { AssetService } from '../../../shared/services/asset.service';
+import { Vehicle } from '../../../shared/models/vehicle';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { AssetService } from '../../../shared/services/asset.service';
   styleUrls: ['./asset-detail.component.css']
 })
 export class AssetDetailComponent implements OnInit {
-
+vehicle: Vehicle = new Vehicle("Feature", ".NET", "Bootcamp");
 asset: Asset;
 
 remove() {
@@ -33,7 +34,8 @@ remove() {
   ngOnInit() {
   	this.route.paramMap
   			.switchMap((params: ParamMap) =>
-  				this.AssetSvc.get(params.get('id')))
+  				this.AssetSvc.dummydetail())
+          // this.AssetSvc.get(params.get('id')))
   			.subscribe((asset: Asset) => this.asset = asset);
   }
 

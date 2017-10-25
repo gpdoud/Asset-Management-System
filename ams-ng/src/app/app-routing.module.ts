@@ -19,6 +19,7 @@ import {AssetListComponent} from './core/asset/asset-list/asset-list.component';
 import {AssetDetailComponent} from './core/asset/asset-detail/asset-detail.component';
 import {AssetAddComponent} from './core/asset/asset-add/asset-add.component';
 
+import {AssetService} from './shared/services/asset.service'
 import {VendorService} from './shared/services/vendor.service'
 import {VehicleService} from './shared/services/vehicle.service'
 
@@ -27,10 +28,13 @@ const approutes: Routes = [
 	{ path: 'about', component: core.AboutComponent },
 	{ path: 'help', component: core.HelpComponent },
 	{ path: 'home', component: core.HomeComponent },
-  { path: 'vehicles', component: VehicleListComponent },
-  { path: 'vehicles/add', component: VehicleAddComponent },
-  { path: 'vehicles/detail', component: VehicleDetailComponent },
-  { path: 'vehicles/edit', component: VehicleEditComponent },
+  //Unlike the PRS app, in this app, the assets are going to be display
+  //the information for the different types of assets using *ngIf on the
+  //relevant pages to display the fields for those types.
+  // { path: 'vehicles', component: VehicleListComponent },
+  // { path: 'vehicles/add', component: VehicleAddComponent },
+  // { path: 'vehicles/detail', component: VehicleDetailComponent },
+  // { path: 'vehicles/edit', component: VehicleEditComponent },
 	{ path: 'assets', component: AssetListComponent},
   { path: 'assets/detail/:id', component: AssetDetailComponent},
   { path: 'assets/add', component: AssetAddComponent},

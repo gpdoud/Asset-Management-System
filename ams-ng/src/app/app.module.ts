@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
+import { FormsModule} from '@angular/forms';
+
 
 import { AppRoutingModule } from '@app/app-routing.module';
 import { CoreModule } from '@app/core/core.module';
@@ -21,6 +24,7 @@ import {AssetListComponent} from './core/asset/asset-list/asset-list.component';
 import {AssetDetailComponent} from './core/asset/asset-detail/asset-detail.component';
 import {AssetAddComponent} from './core/asset/asset-add/asset-add.component';
 
+import {AssetService} from './shared/services/asset.service'
 import {VehicleService} from './shared/services/vehicle.service'
 import {VendorService} from './shared/services/vendor.service'
 
@@ -34,10 +38,10 @@ import {VendorService} from './shared/services/vendor.service'
   AssetListComponent, AssetDetailComponent, AssetAddComponent
   ],
   imports: [
-    BrowserModule, RouterModule, AppRoutingModule, SharedModule, CoreModule
+    BrowserModule, RouterModule, AppRoutingModule, HttpModule, FormsModule, SharedModule, CoreModule
 
   ],
-  providers: [VehicleService, VendorService],
+  providers: [AssetService, VehicleService, VendorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

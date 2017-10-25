@@ -11,6 +11,9 @@
 		<th>Price</th>
 		<th>Unit</th>
 		<th>PhotoPath</th>
+		<th>Make</th>
+		<th>Model</th>
+		<th>VIN</th>
 		<th>Actions</th>
 	</tr>
 	<tr *ngFor="let asset of assets">
@@ -18,7 +21,10 @@
 		<td>{{asset.Price}}</td>
 		<td>{{asset.Unit}}</td>
 		<td>{{asset.PhotoPath}}</td>
-			
+		<td>{{asset.vehicle.Make}}</td>
+		<td>{{asset.vehicle.Model}}</td>
+		<td>{{asset.vehicle.VIN}}</td>	
+
 		<td>
 			<a routerLink="/assets/detail/{{asset.Id}}">Detail</a>
 			<a routerLink="/assets/edit/{{asset.Id}}">Edit</a>

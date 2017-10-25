@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Asset } from '../../../shared/models/asset';
+import { Vehicle } from '../../../shared/models/vehicle';
 import { AssetService } from '../../../shared/services/asset.service';
 
 @Component({
@@ -9,8 +10,8 @@ import { AssetService } from '../../../shared/services/asset.service';
   styleUrls: ['./asset-add.component.css']
 })
 export class AssetAddComponent implements OnInit {
-
-	asset: Asset = new Asset (0, '', '', 0, '', ''); 
+	vehicle: Vehicle = new Vehicle("Feature", ".NET", "Bootcamp");
+	asset: Asset = new Asset (0, '', '', 0, '', '', 'Vehicle', this.vehicle); 
 	
 	add() {
 		this.AssetSvc.add(this.asset).then(

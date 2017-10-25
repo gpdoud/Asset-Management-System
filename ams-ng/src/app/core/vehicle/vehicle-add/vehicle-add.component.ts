@@ -3,9 +3,11 @@ import { Router } from '@angular/router';
 
 import 'rxjs/add/operator/toPromise';
 
-import { Vehicle } from '../../models/Vehicle';
+import { Vehicle } from '../../../shared/models/Vehicle';
 import { VehicleService } from '../../../shared/services/vehicle.service';
-import {VehicleAsset} from '../../models/VehicleAsset';
+import { VehicleAsset } from '../../../shared/models/VehicleAsset';
+import { Asset } from '../../../shared/models/asset';
+
 
 @Component({
   selector: 'app-vehicle-add',
@@ -13,18 +15,18 @@ import {VehicleAsset} from '../../models/VehicleAsset';
   styleUrls: ['./vehicle-add.component.css']
 })
 export class VehicleAddComponent implements OnInit {
-	asset: Asset;
-	vehicleAsset: VehicleAsset;
-	vehicle: Vehicle = new Vehicle('', '', '', '');
+	// asset: Asset = new Asset(0, '', '', 0, '', '', 'Vehicle'); 
+	// vehicleAsset: VehicleAsset;
+	// vehicle: Vehicle = new Vehicle('', '', '', this.asset);
 	
-	add() {
-		this.VehicleSvc.add(this.vehicle).then(
-			resp => { 
-				console.log(resp); 
-				this.router.navigate(["/vehicles"]); 
-			}
-		);
-	}
+	// add() {
+	// 	this.VehicleSvc.add(this.vehicle).then(
+	// 		resp => { 
+	// 			console.log(resp); 
+	// 			this.router.navigate(["/vehicles"]); 
+	// 		}
+	// 	);
+	// }
 
  constructor(private VehicleSvc: VehicleService, 
   				private router: Router) { }

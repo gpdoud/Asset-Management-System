@@ -5,6 +5,7 @@ import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
 
 import { Vehicle } from '../models/Vehicle';
+import { Asset } from '../models/asset';
 
 const urlBase = 'http://localhost:54154/';
 const mvcCtrl = 'Vehicles/';
@@ -14,6 +15,14 @@ const url: string = urlBase + mvcCtrl;
 export class VehicleService {
 
  constructor(private http: Http) { }
+
+ 	// asset: Asset[] = [
+  //    {Id: 1, Vendor: "2", Name: "3", Price: 4, Unit: "5", PhotoPath: "6"}    
+  //  ];
+   // vehicle: Vehicle[] = [
+   // 	{VIN: "1", Make: "Crash", Model: "Dummy", Asset: this.asset}
+   // ];
+
 
 	list(): Promise<Vehicle[]> {
 		return this.http.get(url+'List')

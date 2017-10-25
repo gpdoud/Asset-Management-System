@@ -10,9 +10,12 @@
 		<tr><th> Name</th><td>{{asset.Name}}</td></tr>
 		<tr><th> Price</th><td>{{asset.Price}}</td></tr>
 		<tr><th> Unit</th><td>{{asset.Unit}}</td></tr>
-		<tr><th> PhotoPath</th><td>{{asset.PhotoPath}}</td></tr>
-		
-		
+		<tr><th> PhotoPath</th><td>{{asset.PhotoPath}}</td></tr>		
+	</table>
+	<table class="table" *ngIf="asset.Type == 'Vehicle'">
+		<tr><th>VIN</th><td>{{vehicle.VIN}}</td></tr>
+		<tr><th>Make</th><td>{{vehicle.Make}}</td></tr>
+		<tr><th>Model</th><td>{{vehicle.Model}}</td></tr>
 	</table>
 
 	<div class="text-center">

@@ -1,3 +1,5 @@
+import {Vehicle} from './vehicle'
+
 export class Asset {
 	
 	Id: number;
@@ -6,7 +8,9 @@ export class Asset {
 	Price: number;
 	Unit: string;
 	PhotoPath: string;
-	
+	Type: string;
+	Vehicle: Vehicle;
+	//We'll want to know which person and department an asset belongs to
 		
 	constructor(
 		Id: number,
@@ -15,8 +19,9 @@ export class Asset {
 		Price: number,
 		Unit: string,
 		PhotoPath: string,
-		
-			)
+		Type: string,
+		Vehicle: Vehicle
+		)
 
 	 {
 	 	this.Id = Id;
@@ -25,8 +30,8 @@ export class Asset {
 	 	this.Price = Price;
 	 	this.Unit = Unit;
 	 	this.PhotoPath = PhotoPath;
-	 	
-	 		 	
+	 	this.Type = Type;
+	 	this.Vehicle = Vehicle;
 	 	}
 
 

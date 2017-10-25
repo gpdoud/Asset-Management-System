@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import 'rxjs/add/operator/toPromise';
 
-import { Vehicle } from '../../models/Vehicle';
+import { Vehicle } from '../../../shared/models/Vehicle';
 import { VehicleService } from '../../../shared/services/vehicle.service';
-import { Asset } from './Asset';
+import { VehicleAsset } from '../../../shared/models/VehicleAsset';
+import { Asset } from '../../../shared/models/asset';
 
 @Component({
   selector: 'app-vehicle-detail',
@@ -31,7 +32,7 @@ export class VehicleDetailComponent implements OnInit {
 	}
 
 	edit() {
-		this.router.navigate(['/vehicles/edit/'+this.vehicle.Id]);
+		this.router.navigate(['/vehicles/edit/'+this.asset.Id]);
 	}
 
  constructor(private VehicleSvc: VehicleService, 
