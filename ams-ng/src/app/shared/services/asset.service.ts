@@ -4,6 +4,7 @@ import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
 import { Asset } from '../../shared/models/asset';
+import { Location } from '../../shared/models/location';
 import { Vehicle } from '../models/Vehicle';
 
 const urlBase = 'http://localhost:54154/';
@@ -13,6 +14,10 @@ const url: string = urlBase + mvcCtrl;
 
 @Injectable()
 export class AssetService {
+
+  licenseplate: string;
+  location: Location;
+
 // Dummy data that we can test with
   //Here we have our fake vehicle information, which has three fields at the moment
 vehicle:Vehicle[]=[
@@ -30,6 +35,14 @@ asset: Asset[] = [
   dummydetail(){
     return this.asset;
   }
+    
+    search(): Promise<Asset[]> {
+        let parms = "?licenseplate=" + this.licenseplate + "&location=" + this.location.Id
+        return this.http.get(url+'Search' + parms)
+        .toPromise()
+        .then(resp => resp.json() as Asset[])
+        .catch(this.handleError);
+    }
 
     list(): Promise<Asset[]> {
          return this.http.get(url+'List')
@@ -43,16 +56,23 @@ asset: Asset[] = [
            .toPromise()
            .then(resp => resp.json() as Asset)
            .catch(this.handleError);
-}
+      }
 
-  add(asset:Asset): Promise<any> {
+    add(asset:Asset): Promise<any> {
         return this.http.post(url+'Add', asset)
         .toPromise()
         .then(resp => resp.json() || {})
         .catch(this.handleError);
       }
 
-   remove(asset:Asset): Promise<any> {
+    change(asset:Asset): Promise<any> {
+        return this.http.post(url+'Change', asset)
+        .toPromise()
+        .then(resp => resp.json() || {})
+        .catch(this.handleError);
+      }
+
+     remove(asset:Asset): Promise<any> {
         return this.http.post(url+'Remove', asset)
         .toPromise()
         .then(resp => resp.json() || {})

@@ -40,6 +40,7 @@ const approutes: Routes = [
 	{ path: 'assets', component: AssetListComponent},
   { path: 'assets/detail/:id', component: AssetDetailComponent},
   { path: 'assets/add', component: AssetAddComponent},
+  
   // If the path does not match any of the paths we set above, this will
   // take the user to the HomeComponent's page
   { path: '**', component: core.HomeComponent }
