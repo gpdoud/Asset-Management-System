@@ -5,10 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { CoreModule } from './core/core.module';
 import * as core from '@app/core';
 
-import {VehicleAddComponent} from './core/vehicle/vehicle-add/vehicle-add.component';
-import {VehicleDetailComponent} from './core/vehicle/vehicle-detail/vehicle-detail.component';
-import {VehicleEditComponent} from './core/vehicle/vehicle-edit/vehicle-edit.component';
-import {VehicleListComponent} from './core/vehicle/vehicle-list/vehicle-list.component';
+//All of the work with a Vehicle is going to be handled by Asset, so we no longer need
+//these items, except for reference material
+// import {VehicleAddComponent} from './core/vehicle/vehicle-add/vehicle-add.component';
+// import {VehicleDetailComponent} from './core/vehicle/vehicle-detail/vehicle-detail.component';
+// import {VehicleEditComponent} from './core/vehicle/vehicle-edit/vehicle-edit.component';
+// import {VehicleListComponent} from './core/vehicle/vehicle-list/vehicle-list.component';
 
 import {VendorAddComponent} from './core/vendor/vendor-add/vendor-add.component';
 import {VendorDetailComponent} from './core/vendor/vendor-detail/vendor-detail.component';
