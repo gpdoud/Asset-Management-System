@@ -11,18 +11,24 @@ import { AssetService } from '../../../shared/services/asset.service';
 })
 export class AssetSearchListComponent implements OnInit {
 
-asset: Asset[]
+assets: Asset[] = [
+	new Asset (1,"Kings", "Truck", 47000, "truck", "X"),
+	new Asset (2,"John Ford", "Fire Truck", 43000, "truck", "X"),
+	new Asset (3,"Kings Nissan", "SUV", 34000, "suv", "X")
+];
 
+
+//getting the list of assets that were searched for
 getSearch(): void {
 	this.AssetSvc.search()
-	.then(resp => this.asset = resp)
+	.then(resp => this.assets = resp)
 
 }
 
   constructor(private AssetSvc: AssetService) { }
 
   ngOnInit() {
-  	this.getSearch();
+  //	this.getSearch();
   }
 
 }

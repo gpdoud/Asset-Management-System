@@ -2,12 +2,11 @@
 
 	<div><span class="PageTitle">Asset Search</span></div>
 	<div style="text-align: center;">
-	<form *ngIf="asset" style="display: inline-block; width: 50%; padding: 30px 30px 0 0;border: 1px solid silver;">  
+	<form  style="display: inline-block; width: 50%; padding: 30px 30px 0 0;border: 1px solid silver;">  
 
 	<div class='form-group'>
 	<label class='col-md-3 control-label' for="assetsearch-licenseplate">License Plate</label>
 	<div class='col-md-9'>
-	<input type='radio' name= 'licenseplate' id='licenseplate' value='licenseplate'>
 	<input class='form-control' name='License Plate' type= 'text' id='assetsearch-licenseplate' 
 		[(ngModel)]='licenseplate' placeholder="License Plate">
 	</div>
@@ -16,9 +15,8 @@
 	<div class='form-group'>
 	<label class='col-md-3 control-label' for="assetsearch-location">Location</label>
 	<div class='col-md-9'>
-		<input type='radio' name= 'location' id='location' value='location'>
-		<select [(ngModel)]="location.Id" name='Location Id' class='form-control'>
-			<option *ngFor="let location of locations" [ngValue]="location.Id">{{location.Name}}</option>
+		<select [(ngModel)]="location" name='Location Id' class='form-control'>
+			<option *ngFor="let location of locations" [ngValue]="location">{{location.Name}}</option>
 		</select>
 	</div>
 	</div>

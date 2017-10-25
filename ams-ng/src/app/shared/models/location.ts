@@ -1,6 +1,7 @@
 export class Location {
 	
 	Id: number;
+	Name: string;
 	Department: string;
 	Address: string;
 	City: string;
@@ -10,6 +11,7 @@ export class Location {
 	
 	constructor(
 		Id: number,
+		Name: string,
 		Department: string,
 		Address: string,
 		City: string,
@@ -20,6 +22,7 @@ export class Location {
 
 	 {
 	 	this.Id = Id;
+	 	this.Name = Name;
 	  	this.Department = Department;
 	 	this.Address = Address;
 	 	this.City = City;

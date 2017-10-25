@@ -15,6 +15,9 @@ import { AssetService } from './shared/services/asset.service';
 import { AboutComponent } from './core/about/about.component';
 import { HelpComponent } from './core/help/help.component';
 import { HomeComponent } from './core/home/home.component';
+import { AssetSearchComponent } from './core/asset/asset-search/asset-search.component';
+import { AssetSearchListComponent } from './core/asset/asset-search-list/asset-search-list.component';
+
 
 @NgModule({
   declarations: [
@@ -25,14 +28,16 @@ import { HomeComponent } from './core/home/home.component';
     AssetAddComponent,
     AboutComponent,
     HelpComponent,
-    HomeComponent
+    HomeComponent,
+    AssetSearchComponent,
+    AssetSearchListComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule,
     AppRoutingModule,
     CoreModule,
-    FormsModule,
     HttpModule
   ],
   providers: [
