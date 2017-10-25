@@ -13,6 +13,7 @@
 			<th>City</th>
 			<th>State</th>
 			<th>Phone</th>
+			<th>Actions</th>
 		</tr>
 			<!-- for each loop-->
 		<tr *ngFor="let location of locations">
@@ -23,8 +24,8 @@
 			<td>{{location.State}} </td>
 			<td>{{location.Phone}} </td>
 			<td>
-				<a routerLink="/locations/detail/{{user.Id}}">Detail</a>
-				<a routerLink="/locations/edit/{{user.Id}}">Edit</a>
+				<a routerLink="/locations/detail/{{location.Id}}">Detail</a>
+				<a routerLink="/locations/edit/{{location.Id}}">Edit</a>
 			</td>
 		</tr>
 	</table>
