@@ -13,17 +13,17 @@ import { LocationService } from '../../../shared/services/location.service';
 })
 export class AssetSearchComponent implements OnInit {
 
-	licenseplate: string;
-	location: string;
+	// licenseplate: string;
+	// location: string;
 	
-	getLocation(): void {
-		this.LocationSvc.list()
-			.then(resp => this.location = resp);  
-	}
-  constructor(private AssetSvc: AssetService) { }
+	// getLocation(): void {
+	// 	this.LocationSvc.list()
+	// 		.then(resp => this.location = resp);  
+	// }
+ //  constructor(private AssetSvc: AssetService, private LocationSvc: LocationService) { }
 
   ngOnInit() {
-  	this.getLocation();
+  	// this.getLocation();
   }
 
 }
