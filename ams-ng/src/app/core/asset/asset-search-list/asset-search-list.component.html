@@ -2,9 +2,8 @@
 <div>
 
 	<div>
-		<span class="PageTitle">Asset List</span>
-		<span class="CreateNew"><a routerLink="/assets/add">Add New</a></span>
-		<span class="CreateNew"><a routerLink="/assets/search">Search</a></span>
+		<span class="PageTitle">Asset Search Results</span>
+	
 	</div>
 
 	<table class="table" *ngIf="assets">
@@ -25,8 +24,7 @@
 			
 		<td>
 			<a routerLink="/assets/detail/{{asset.Id}}">Detail</a>
-			<a routerLink="/assets/edit/{{asset.Id}}">Edit</a>
-
+			
 		</td>
 	</tr>
 	</table>

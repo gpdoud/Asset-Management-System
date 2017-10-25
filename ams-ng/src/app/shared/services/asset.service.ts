@@ -6,6 +6,7 @@ import 'rxjs/add/operator/map';
 //import { Observable } from 'rxjs';
 
 import { Asset } from '../../shared/models/asset';
+import { Location } from '../../shared/models/location';
 
 const urlBase = 'http://localhost:54154/';
 const mvcCtrl = 'Assets/';
@@ -15,10 +16,20 @@ const url: string = urlBase + mvcCtrl;
 @Injectable()
 export class AssetService {
 
+  licenseplate: string;
+  location: Location;
+  
   
   constructor(private http: Http) {}
     
-    
+    search(): Promise<Asset[]> {
+        let parms = "?licenseplate=" + this.licenseplate + "&location=" + this.location.Id
+        return this.http.get(url+'Search' + parms)
+        .toPromise()
+        .then(resp => resp.json() as Asset[])
+        .catch(this.handleError);
+    }
+
   	list(): Promise<Asset[]> {
    			return this.http.get(url+'List')
    				.toPromise()
@@ -47,7 +58,7 @@ export class AssetService {
         .catch(this.handleError);
       }
 
- 	remove(asset:Asset): Promise<any> {
+ 	  remove(asset:Asset): Promise<any> {
         return this.http.post(url+'Remove', asset)
         .toPromise()
         .then(resp => resp.json() || {})
