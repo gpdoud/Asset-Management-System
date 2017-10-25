@@ -14,9 +14,9 @@
 			<tr><th> PhotoPath</th><td>{{asset.PhotoPath}}</td></tr>		
 		</table>
 		<table class="table" *ngIf="asset.Type == 'Vehicle'">
-			<tr><th>VIN</th><td>{{vehicle.VIN}}</td></tr>
-			<tr><th>Make</th><td>{{vehicle.Make}}</td></tr>
-			<tr><th>Model</th><td>{{vehicle.Model}}</td></tr>
+			<tr><th>VIN</th><td>{{asset.Vehicle.VIN}}</td></tr>
+			<tr><th>Make</th><td>{{asset.Vehicle.Make}}</td></tr>
+			<tr><th>Model</th><td>{{asset.Vehicle.Model}}</td></tr>
 		</table>
 	</div>
 

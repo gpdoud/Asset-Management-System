@@ -14,7 +14,7 @@ import { Vehicle } from '../../../shared/models/vehicle';
   styleUrls: ['./asset-detail.component.css']
 })
 export class AssetDetailComponent implements OnInit {
-vehicle: Vehicle = new Vehicle("Feature", ".NET", "Bootcamp");
+vehicle: Vehicle;
 asset: Asset;
 
 remove() {
@@ -34,9 +34,11 @@ remove() {
   ngOnInit() {
   	this.route.paramMap
   			.switchMap((params: ParamMap) =>
-  				//this.AssetSvc.dummydetail())
+  				//Method for testing with dummy data
+          //this.AssetSvc.dummydetail())
           this.AssetSvc.get(params.get('id')))
-  			.subscribe((asset: Asset) => this.asset = asset);
+  			.subscribe((asset: Asset) => { this.asset = asset; 
+          console.log("asset"); console.log(asset); console.log("this.asset");console.log(this.asset); });
   }
 
 }
