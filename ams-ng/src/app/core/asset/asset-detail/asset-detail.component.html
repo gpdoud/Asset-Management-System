@@ -11,16 +11,15 @@
 			<tr><th> Name</th><td>{{asset.Name}}</td></tr>
 			<tr><th> Price</th><td>{{asset.Price}}</td></tr>
 			<tr><th> Unit</th><td>{{asset.Unit}}</td></tr>
-			<tr><th> PhotoPath</th><td>{{asset.PhotoPath}}</td></tr>		
-		</table>
-		<table class="table" *ngIf="asset.Type == 'Vehicle'">
-			<tr><th>VIN</th><td>{{asset.Vehicle.VIN}}</td></tr>
-			<tr><th>Make</th><td>{{asset.Vehicle.Make}}</td></tr>
-			<tr><th>Model</th><td>{{asset.Vehicle.Model}}</td></tr>
+			<tr><th> PhotoPath</th><td>{{asset.PhotoPath}}</td></tr>
+			<tr *ngIf="asset.Type == 'Vehicle'"><th>VIN</th><td>{{asset.Vehicle.VIN}}</td></tr>
+			<tr *ngIf="asset.Type == 'Vehicle'"><th>Make</th><td>{{asset.Vehicle.Make}}</td></tr>
+			<tr *ngIf="asset.Type == 'Vehicle'"><th>Model</th><td>{{asset.Vehicle.Model}}</td></tr>		
 		</table>
 	</div>
-
+	
 	<div class="text-center">
+		<button (click)='update()' id='update' class='col-md-aa col-md-offset-1 btn btn-warning'>Update</button> | 
 		<button class="btn btn-danger" (click)="remove()">Delete</button>
 	</div>
 

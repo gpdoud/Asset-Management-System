@@ -59,6 +59,8 @@ asset: Asset[] = [
       }
 
     add(asset:Asset): Promise<any> {
+        console.log("service add()");
+        console.log(asset);
         return this.http.post(url+'Add', asset)
         .toPromise()
         .then(resp => resp.json() || {})

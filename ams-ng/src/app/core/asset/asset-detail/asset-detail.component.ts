@@ -26,7 +26,14 @@ remove() {
         });
   }
 
-   	
+  update() {
+    this.AssetSvc.change(this.asset).then(
+      resp => {
+        console.log(resp);
+        this.router.navigate(['/assets']);
+      }
+      )
+  } 	
 
   constructor(private AssetSvc: AssetService, private router: Router, 
   	private route: ActivatedRoute) { }

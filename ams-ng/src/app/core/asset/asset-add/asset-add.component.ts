@@ -19,7 +19,9 @@ export class AssetAddComponent implements OnInit {
 	asset: Asset = new Asset (0, '', '', 0, '', '', 'Vehicle', this.vehicle); 
 	
 	add() {
-		this.AssetSvc.add(this.asset).then(
+		console.log("asset-add add()");
+		console.log(this.asset);
+		this.AssetSvc.add(this.asset).then(			
 			resp => {
 				console.log(resp);
 				this.router.navigate(["/assets"]);
