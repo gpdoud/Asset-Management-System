@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-
-import { User } from '../models/User'
+import { User } from '../models/User';
 
 @Injectable()
 export class SystemService {
@@ -20,7 +19,6 @@ export class SystemService {
 		console.log("SystemService", "isLoggedIn()", this.loggedInUser != null);
 		return this.loggedInUser != null;
 	}
-
 
   constructor() { }
 

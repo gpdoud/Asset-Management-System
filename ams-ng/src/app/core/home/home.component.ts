@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
 import { SystemService } from '../../shared/services/system.service';
+import { User } from '../../shared/models/User';
+
+// import { SystemService } from '../../shared/services/system.service';
 
 @Component({
   selector: 'app-home',
@@ -10,12 +12,17 @@ import { SystemService } from '../../shared/services/system.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private SystemSvc: SystemService, private router: Router) { }
+  loggedInUser: User;
 
-  ngOnInit() { 
-  	// if(!this.SystemSvc.isLoggedIn()) {
-  	// 	this.router.navigateByUrl("/login");
-  	}
-  	// this.loggedInUser = this.SystemSvc.getLoggedIn();
+  constructor(private SystemSvc: SystemService,
+        private router: Router) { }
+
+  ngOnInit() {
+    if(!this.SystemSvc.isLoggedIn()) {
+      this.router.navigateByUrl("/login");
+    } else {
+      this.loggedInUser = this.SystemSvc.getLoggedIn();
+    }
   }
+}
 

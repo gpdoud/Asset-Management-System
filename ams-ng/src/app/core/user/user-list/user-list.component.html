@@ -12,6 +12,7 @@
 			<th>Email</th>
 			<th>Admin Level</th>
 			<th>Active?</th>
+			<th>Actions</th>
 		</tr>
 			<!-- for each loop-->
 		<tr *ngFor="let user of users">
@@ -22,8 +23,8 @@
 			<td *ngIf="user.IsActive">Yes</td>
 			<td *ngIf="!user.IsActive">&nbsp;</td>
 			<td>
-				<a routerLink="/users/detail/{{user.UserID}}">Detail</a>
-				<a routerLink="/users/edit/{{user.UserID}}">Edit</a>
+				<a routerLink="/users/detail/{{user.Id}}">Detail</a>
+				<a routerLink="/users/edit/{{user.Id}}">Edit</a>
 			</td>
 		</tr>
 	</table>

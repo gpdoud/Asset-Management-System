@@ -20,8 +20,8 @@ export class UserService {
 
 
   	login(username: string, password: string): Promise<User[]> {
-  		let parms = "UserName=" + username + "&Password=" + password;
-      console.log("login() UserSVC")
+  		let parms = "username=" + username + "&password=" + password;
+      console.log("login() UserSVC", username, password)
   		return this.http.get(url+'Login?'+parms)
   			.toPromise()
   			.then(resp => resp.json() as User[])

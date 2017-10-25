@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import 'rxjs/add/operator/toPromise';
 
 import { User } from '../../shared/models/User';
-// import { UserService } from '../../shared/services/user.service';
+import { UserService } from '../../shared/services/user.service';
 import { SystemService } from '../../shared/services/system.service';
 
 @Component({
@@ -41,9 +41,11 @@ export class LoginComponent implements OnInit {
 		}
 	}
 
+  	//injecting module we want to use into our component at run-time
   constructor(private UserSvc: UserService, private SystemSvc: SystemService, private router: Router) { }
 
   ngOnInit() {
   }
 
 }
+

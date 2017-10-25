@@ -1,8 +1,10 @@
 export class User {
 	
 	Id: number;
+	// Location: string;
+	// Department: string;
 	Username: string;
-	Password: string,
+	Password: string;
 	FirstName: string;
 	LastName: string;
 	Email: string;
@@ -11,6 +13,8 @@ export class User {
 
 	constructor(
 		Id: number,
+		// Location: string,
+		// Department: string,
 		Username: string,
 		Password: string,
 		FirstName: string,
@@ -20,6 +24,8 @@ export class User {
 		IsActive: boolean
 	) {
 		this.Id = Id;
+		// this.Location = Location;
+		// this.Department = Department;
 		this.Username = Username;
 		this.Password = Password;
 		this.FirstName = FirstName;

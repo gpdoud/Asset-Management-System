@@ -11,21 +11,25 @@ import { UserService } from '../../../shared/services/user.service';
 })
 export class UserAddComponent implements OnInit {
 
+		//creates new blank instance of user
 	user: User = new User(0, '', 'pass@word1!', '', '', '', 0, false);
 	
 	add() {
 		this.UserSvc.add(this.user).then(
+			//resp is JSON message from backend
 			resp => { 
+			console.log(this.user)
 				console.log(resp); 
 				this.router.navigate(["/users"]); 
 			}
-		);
+		);			
 	}
 
   constructor(private UserSvc: UserService, 
   	private router: Router) { }
 
   ngOnInit() {
+
   }
 
 }

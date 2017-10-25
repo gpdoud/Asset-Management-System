@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { SystemService } from '../../shared/services/system.service';
+// import { SystemService } from '../shared/services/system.service';
 import { User } from '../../shared/models/User';
+
+//imports menu.ts file
 import { Menu } from './menu';
 
 @Component({
@@ -10,28 +12,24 @@ import { Menu } from './menu';
 })
 export class MenuComponent implements OnInit {
 
-	name = "Menu Component"
-
-	loggedInUser: User;
-
+	name = "Menu Component";
+  
+  	loggedInUser: User;
 
 	menus: Menu[] = [
-		new Menu("HOME", "/home", "Home menu item"),
-  		new Menu("LOGIN ", "/login", "Login menu item"),
-	    new Menu("USERS ", "/users", "User list"),
-	    new Menu("ASSETS ", "/assets", "Asset list"),
-	    new Menu("VENDORS ", "/vendors", "Vendor list"),
-	  //   new Menu("RECORDS ", "/servicerecords", "Service record list"),
-	  //   new Menu("DOCS/PHOTOS ", "/purchaserequests/review", "Documents and photos"),
-	  //  	new Menu("LOCATIONS ", "/locations", "Locations"),
-	 	// new Menu("DEPRECIATION ", "/depreciation", "Depreciation"),
-	// new Menu("ABOUT", "/about", "About menu item"),
-	// new Menu("CONTACT", "/contact", "Contact menu item"),
-	// new Menu("HELP", "/help", "Help menu item")	
+	  new Menu("BROWSE ", "/assets", "Home menu item"),
+    new Menu("LOGIN ", "/login", "Login menu item"),
+  	new Menu("USERS ", "/users", "Users menu item"),
+  	// new Menu("VENDORS ", "/vendors", "Vendor menu item"),
+  	// new Menu("ASSETS ", "/assets", "Asset menu item"),
+  	// new Menu("VEHICLES ", "/vehicles", "Vehicles menu item"),
+  	// new Menu("RECORDS ", "/records", "Records menu item"),
+  	// new Menu("DOCUMENTS ", "/documents", "Documents menu item"),
+  	// new Menu("LOCATIONS ", "/locations", "Locations menu item")
 ];
 
 
-  constructor(private SystemSvc: SystemService) { }
+  constructor() { }
 
   ngOnInit() {
   }
