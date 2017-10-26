@@ -34,6 +34,9 @@ import { UserEditComponent } from './core/user/user-edit/user-edit.component';
 import { UserAddComponent } from './core/user/user-add/user-add.component';
 
 import { LocationListComponent } from './core/location/location-list/location-list.component';
+import { LocationEditComponent } from './core/location/location-edit/location-edit.component';
+import { LocationDetailComponent } from './core/location/location-detail/location-detail.component';
+import { LocationAddComponent } from './core/location/location-add/location-add.component';
 
 
 @NgModule({
@@ -49,7 +52,10 @@ import { LocationListComponent } from './core/location/location-list/location-li
     UserDetailComponent, 
     UserEditComponent, 
     UserAddComponent,
-    LocationListComponent
+    LocationListComponent,
+    LocationEditComponent,
+    LocationDetailComponent,
+    LocationAddComponent
   ],
   imports: [
     BrowserModule,
