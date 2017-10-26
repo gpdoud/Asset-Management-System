@@ -38,7 +38,6 @@ import { LocationEditComponent } from './core/location/location-edit/location-ed
 import { LocationAddComponent } from './core/location/location-add/location-add.component';
 
 
-
 @NgModule({
   declarations: [
 
@@ -54,7 +53,7 @@ import { LocationAddComponent } from './core/location/location-add/location-add.
     UserAddComponent,
     LocationListComponent,
     LocationEditComponent,
-    LocationDetailComponent, 
+    LocationDetailComponent,
     LocationAddComponent
   ],
   imports: [
