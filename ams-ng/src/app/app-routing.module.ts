@@ -1,12 +1,20 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
+import { FormsModule} from '@angular/forms';
 
-import { HomeComponent } from './core/home/home.component';
+
+import { AppRoutingModule } from '@app/app-routing.module';
 import { AboutComponent } from './core/about/about.component';
+import { HomeComponent } from './core/home/home.component';
 import { HelpComponent } from './core/help/help.component';
-import { CoreModule } from './core/core.module';
-import * as core from '@app/core';
+import { SharedModule } from '@app/shared/shared.module';
+
+import { AppComponent } from '@app/app.component';
+
+import {MenuComponent} from './core/menu/menu.component';
+import { LoginComponent } from './core/login/login.component';
 
 //All of the work with a Vehicle is going to be handled by Asset, so we no longer need
 //these items, except for reference material
@@ -26,8 +34,6 @@ import {AssetAddComponent} from './core/asset/asset-add/asset-add.component';
 import { AssetSearchComponent } from './core/asset/asset-search/asset-search.component';
 import { AssetSearchListComponent } from './core/asset/asset-search-list/asset-search-list.component';
 
-import { LoginComponent } from './core/login/login.component';
-
 import { UserListComponent } from './core/user/user-list/user-list.component';
 import { UserDetailComponent } from './core/user/user-detail/user-detail.component';
 import { UserEditComponent } from './core/user/user-edit/user-edit.component';
@@ -38,45 +44,32 @@ import { LocationEditComponent } from './core/location/location-edit/location-ed
 import { LocationDetailComponent } from './core/location/location-detail/location-detail.component';
 import { LocationAddComponent } from './core/location/location-add/location-add.component';
 
-const approutes: Routes = [
-	{ path: '', redirectTo: '/', pathMatch: "full" },
-	{ path: 'about', component: AboutComponent },
-	{ path: 'help', component: HelpComponent },
-	{ path: 'home', component: HomeComponent },
-  //Unlike the PRS app, in this app, the assets are going to be display
-  //the information for the different types of assets using *ngIf on the
-  //relevant pages to display the fields for those types.
-  // { path: 'vehicles', component: VehicleListComponent },
-  // { path: 'vehicles/add', component: VehicleAddComponent },
-  // { path: 'vehicles/detail', component: VehicleDetailComponent },
-  // { path: 'vehicles/edit', component: VehicleEditComponent },
-	{ path: 'assets', component: AssetListComponent},
-  { path: 'assets/detail/:id', component: AssetDetailComponent},
-  { path: 'assets/add', component: AssetAddComponent},
+import {AssetService} from './shared/services/asset.service'
+import {VehicleService} from './shared/services/vehicle.service'
+import {VendorService} from './shared/services/vendor.service'
 
-  { path: "users", component: UserListComponent },
-  { path: "users/detail/:id", component: UserDetailComponent },
-  { path: "users/edit/:id", component: UserEditComponent },
-  { path: "users/add", component: UserAddComponent },
+import { SystemService } from './shared/services/system.service';
+import { UserService } from './shared/services/user.service';
+import { LocationService } from './shared/services/location.service';
 
-  { path: "locations", component: LocationListComponent },
-  { path: "locations/detail/:id", component: LocationDetailComponent },
-  { path: "locations/edit/:id", component: LocationEditComponent },
-  { path: "locations/add", component: LocationAddComponent },
-  // If the path does not match any of the paths we set above, this will
-  // take the user to the HomeComponent's page
-  { path: '**', component: core.HomeComponent }
-];
 
 @NgModule({
-  imports: [
-    CommonModule,
-  	RouterModule.forRoot(approutes, { enableTracing: false })
+  declarations: [AboutComponent, HelpComponent, HomeComponent, AppComponent, MenuComponent, LoginComponent,
+  // VehicleAddComponent, VehicleDetailComponent, VehicleEditComponent, VehicleListComponent,
+
+  VendorAddComponent, VendorDetailComponent, VendorEditComponent, VendorListComponent,
+
+  AssetListComponent, AssetDetailComponent, AssetAddComponent, AssetSearchComponent, AssetSearchListComponent,
+
+  UserListComponent, UserDetailComponent, UserEditComponent, UserAddComponent,
+
+  LocationListComponent, LocationEditComponent, LocationDetailComponent, LocationAddComponent
   ],
-  declarations: [
-  	AboutComponent,
-  	HelpComponent,
-  	HomeComponent
-  ]
+  imports: [
+    BrowserModule, RouterModule, AppRoutingModule, HttpModule, FormsModule, SharedModule
+
+  ],
+  providers: [AssetService, VehicleService, VendorService, SystemService, UserService, LocationService],
+  bootstrap: [AppComponent]
 })
-export class AppRoutingModule { }
+export class AppModule { }
