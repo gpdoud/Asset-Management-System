@@ -1,10 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { Routes, RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from '@app/app-routing.module';
-import { CoreModule } from '@app/core/core.module';
 
 import { AppComponent } from '@app/app.component';
 import { Headers, Http } from '@angular/http';
@@ -62,8 +61,9 @@ import { LocationAddComponent } from './core/location/location-add/location-add.
     BrowserModule,
     RouterModule,
     AppRoutingModule,
-    CoreModule,
+    // CoreModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule
   ],
   providers: [
