@@ -8,15 +8,19 @@
 	<table class="table" *ngIf="assets">
 	<tr>
 		<th>Name</th>
-		<th>AssetCost</th>
-		<th>Unit</th>
+		<th>Vendor</th>
+		<th>Asset Cost</th>
+		<th>Purchase Order Number</th>
+		<th>Location</th>
 		<th>PhotoPath</th>
 		<th>Actions</th>
 	</tr>
 	<tr *ngFor="let asset of assets">
 		<td>{{asset.Name}}</td>
+		<td>{{asset.Vendor}}</td>
 		<td>{{asset.AssetCost}}</td>
-		<td>{{asset.Unit}}</td>
+		<td>{{asset.PurchaseOrderNumber}}</td>
+		<td>{{asset.Location.Name}}</td>
 		<td>{{asset.PhotoPath}}</td>
 		<td>
 			<a routerLink="/assets/detail/{{asset.Id}}">Detail/Edit</a>

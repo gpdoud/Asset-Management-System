@@ -34,7 +34,9 @@ export class Asset {
 	//Equipment: Equipment;
 	//If the Asset is Furniture, here is where that gets attached.
 	//Furniture: Furniture;
-	//Where is the Asset?
+	//What is the foreign key that links to the Location?
+	LocationId: number;
+	//Where is the Asset, what is the Location?
 	Location: Location;//show in the asset-list
 	//Who is the person, or who are the people assigned to use the Asset?
 	AssignedTo: string;
@@ -56,6 +58,7 @@ export class Asset {
 		PhotoPath: string,
 		Type: string,
 		Vehicle: Vehicle,
+		LocationId: number,
 		Location: Location
 		//ServiceRecord: ServiceRecord
 		)
@@ -75,6 +78,7 @@ export class Asset {
 	 	this.PhotoPath = PhotoPath;
 	 	this.Type = Type;
 	 	this.Vehicle = Vehicle;
+	 	this.LocationId = LocationId;
 	 	this.Location = Location;
 	 	//this.ServiceRecord: ServiceRecord;
 	 	}
