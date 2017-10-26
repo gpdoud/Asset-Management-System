@@ -9,14 +9,25 @@
 		<table class="table">
 			<tr><th> Name</th><td>{{asset.Name}}</td></tr>
 			<tr *ngIf="asset.Location"><th>Location</th><td>{{asset.Location.Name}}</td></tr>
-			<tr><th> Vendor</th><td>{{asset.Vendor}}</td></tr>			
-			<tr><th> AssetCost</th><td>{{asset.AssetCost}}</td></tr>
-			<tr><th> Unit</th><td>{{asset.Unit}}</td></tr>
-			<tr><th> PhotoPath</th><td>{{asset.PhotoPath}}</td></tr>
+			<tr><th> Vendor</th><td>{{asset.Vendor}}</td></tr>
+			<tr><th> Purchase Date</th><td>{{asset.PurchaseDate}}</td></tr>
+			<tr><th> Purchase Order Number</th><td>{{asset.PurchaseOrderNumber}}</td></tr>		
+			<tr><th> Asset Cost</th><td>{{asset.AssetCost}}</td></tr>
+
+			<tr><th> Out For Repair Date</th><td>{{asset.OutForRepairDate}}</td></tr>
+			<tr><th> Back From Repair Date</th><td>{{asset.BackFromRepairDate}}</td></tr>
+			<tr><th> Retired Date</th><td>{{asset.RetiredDate}}</td></tr>
+			<tr><th> Surplus Date</th><td>{{asset.SurplusDate}}</td></tr>
+			<tr><th> Sales Proceeds</th><td>{{asset.SalesProceeds}}</td></tr>			
+			<tr><th> Photo Path</th><td>{{asset.PhotoPath}}</td></tr>
+
+			<tr *ngIf="asset.Type == 'Vehicle'"><th>License</th><td>{{asset.Vehicle.License}}</td></tr>
 			<tr *ngIf="asset.Type == 'Vehicle'"><th>VIN</th><td>{{asset.Vehicle.VIN}}</td></tr>
 			<tr *ngIf="asset.Type == 'Vehicle'"><th>Make</th><td>{{asset.Vehicle.Make}}</td></tr>
 			<tr *ngIf="asset.Type == 'Vehicle'"><th>Model</th><td>{{asset.Vehicle.Model}}</td></tr>	
-
+			<tr *ngIf="asset.Type == 'Vehicle'"><th>Are there lights on the roof?</th><td>{{asset.Vehicle.HasLights}}</td></tr>
+			
+			<tr><th> Assigned To:</th><td>{{asset.AssignedTo}}</td></tr>
 		</table>
 	</div>
 	
