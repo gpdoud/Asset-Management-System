@@ -7,14 +7,16 @@
 
 	<div *ngIf="asset">
 		<table class="table">
-			<tr><th> Vendor</th><td>{{asset.Vendor}}</td></tr>
 			<tr><th> Name</th><td>{{asset.Name}}</td></tr>
-			<tr><th> Price</th><td>{{asset.Price}}</td></tr>
+			<tr *ngIf="asset.Location"><th>Location</th><td>{{asset.Location.Name}}</td></tr>
+			<tr><th> Vendor</th><td>{{asset.Vendor}}</td></tr>			
+			<tr><th> AssetCost</th><td>{{asset.AssetCost}}</td></tr>
 			<tr><th> Unit</th><td>{{asset.Unit}}</td></tr>
 			<tr><th> PhotoPath</th><td>{{asset.PhotoPath}}</td></tr>
 			<tr *ngIf="asset.Type == 'Vehicle'"><th>VIN</th><td>{{asset.Vehicle.VIN}}</td></tr>
 			<tr *ngIf="asset.Type == 'Vehicle'"><th>Make</th><td>{{asset.Vehicle.Make}}</td></tr>
-			<tr *ngIf="asset.Type == 'Vehicle'"><th>Model</th><td>{{asset.Vehicle.Model}}</td></tr>		
+			<tr *ngIf="asset.Type == 'Vehicle'"><th>Model</th><td>{{asset.Vehicle.Model}}</td></tr>	
+
 		</table>
 	</div>
 	

@@ -25,7 +25,7 @@ vehicle:Vehicle[]=[
 ];
   //Here is our fake asset, which has our fake vehicle built into it
 asset: Asset[] = [
-     {Id: 1, Vendor: "KaBoom Cars", Name: "3", Price: 4, Unit: "5", PhotoPath: "6", Type: "Vehicle", Vehicle: this.vehicle[0]}    
+     {Id: 1, Vendor: "KaBoom Cars", Name: "3", AssetCost: 4, Unit: "5", PhotoPath: "6", Type: "Vehicle", Vehicle: this.vehicle[0]}    
    ];
 
   

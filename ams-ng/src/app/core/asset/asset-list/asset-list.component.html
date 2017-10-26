@@ -8,14 +8,14 @@
 	<table class="table" *ngIf="assets">
 	<tr>
 		<th>Name</th>
-		<th>Price</th>
+		<th>AssetCost</th>
 		<th>Unit</th>
 		<th>PhotoPath</th>
 		<th>Actions</th>
 	</tr>
 	<tr *ngFor="let asset of assets">
 		<td>{{asset.Name}}</td>
-		<td>{{asset.Price}}</td>
+		<td>{{asset.AssetCost}}</td>
 		<td>{{asset.Unit}}</td>
 		<td>{{asset.PhotoPath}}</td>
 		<td>

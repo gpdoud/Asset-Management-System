@@ -17,7 +17,7 @@ export class VehicleService {
  constructor(private http: Http) { }
 
  	// asset: Asset[] = [
-  //    {Id: 1, Vendor: "2", Name: "3", Price: 4, Unit: "5", PhotoPath: "6"}    
+  //    {Id: 1, Vendor: "2", Name: "3", AssetCost: 4, Unit: "5", PhotoPath: "6"}    
   //  ];
    // vehicle: Vehicle[] = [
    // 	{VIN: "1", Make: "Crash", Model: "Dummy", Asset: this.asset}
