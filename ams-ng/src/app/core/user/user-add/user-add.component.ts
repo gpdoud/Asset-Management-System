@@ -12,7 +12,7 @@ import { UserService } from '../../../shared/services/user.service';
 export class UserAddComponent implements OnInit {
 
 		//creates new blank instance of user
-	user: User = new User(0, '', 'pass@word1!', '', '', '', 0, false);
+	user: User = new User(0, '', 'pass@word1!', '', '', '', 0, true);
 	
 	add() {
 		this.UserSvc.add(this.user).then(

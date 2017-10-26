@@ -1,9 +1,9 @@
 <menu-comp></menu-comp>
-<div>
+<div class="MainContent form-horizontal">
 
-	<div><span class="PageTitle">User Detail</span>
-		<span class="CreateNew"><a routerLink="/users/add">Add New</a></span>
-	</div>
+	<div style="text-align: center;">
+		<span class="PageTitle"><h2>User Detail</h2></span>
+		<span class="CreateNew"><a routerLink="/users/add">Add New</a></span></div>&nbsp;
 
 	<table class="table" *ngIf="user">
 		<tr><th>Name</th><td>{{user.FirstName}} {{user.LastName}}</td></tr>
