@@ -1,0 +1,32 @@
+<menu-comp></menu-comp>
+<div class="MainContent form-horizontal">
+
+	<div style="text-align: center;">
+		<span class="PageTitle"><h1>Locations</h1></span>
+		<span class="CreateNew"><a routerLink="/locations/add">Add New</a></span></div>&nbsp;
+		<!-- *ngIf looks at variable "locations" in component; if null, table remains unfilled, once table is populated, it fills -->
+	<table class="table" *ngIf="locations">
+		<tr>
+			<th>Name</th>
+			<th>Department</th>
+			<th>Address</th>
+			<th>City</th>
+			<th>State</th>
+			<th>Phone</th>
+			<th>Actions</th>
+		</tr>
+			<!-- for each loop-->
+		<tr *ngFor="let location of locations">
+			<td>{{location.Name}}</td>
+			<td>{{location.Department}}</td>
+			<td>{{location.Address}} </td>
+			<td>{{location.City}} </td>
+			<td>{{location.State}} </td>
+			<td>{{location.Phone}} </td>
+			<td>
+				<a routerLink="/locations/detail/{{location.Id}}">Detail</a>
+				<a routerLink="/locations/edit/{{location.Id}}">Edit</a>
+			</td>
+		</tr>
+	</table>
+</div>

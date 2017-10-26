@@ -21,15 +21,22 @@ import { HomeComponent } from './core/home/home.component';
 import { AboutComponent } from './core/about/about.component';
 import { HelpComponent } from './core/help/help.component';
 import { LoginComponent } from './core/login/login.component';
-import { SystemService } from './shared/services/system.service';
-
-import { UserService } from './shared/services/user.service';
 import { MenuComponent } from './core/menu/menu.component';
+
+import { SystemService } from './shared/services/system.service';
+import { UserService } from './shared/services/user.service';
+import { LocationService } from './shared/services/location.service';
+
 
 import { UserListComponent } from './core/user/user-list/user-list.component';
 import { UserDetailComponent } from './core/user/user-detail/user-detail.component';
 import { UserEditComponent } from './core/user/user-edit/user-edit.component';
 import { UserAddComponent } from './core/user/user-add/user-add.component';
+
+import { LocationListComponent } from './core/location/location-list/location-list.component';
+import { LocationEditComponent } from './core/location/location-edit/location-edit.component';
+import { LocationDetailComponent } from './core/location/location-detail/location-detail.component';
+import { LocationAddComponent } from './core/location/location-add/location-add.component';
 
 
 @NgModule({
@@ -39,13 +46,16 @@ import { UserAddComponent } from './core/user/user-add/user-add.component';
     HomeComponent, 
     AboutComponent,
     MenuComponent,
+    LoginComponent,
     HelpComponent,
     UserListComponent, 
     UserDetailComponent, 
     UserEditComponent, 
     UserAddComponent,
-    MenuComponent,
-    LoginComponent
+    LocationListComponent,
+    LocationEditComponent,
+    LocationDetailComponent,
+    LocationAddComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +67,8 @@ import { UserAddComponent } from './core/user/user-add/user-add.component';
   ],
   providers: [
       UserService,
-      SystemService],
+      SystemService,
+      LocationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
