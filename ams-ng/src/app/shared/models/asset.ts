@@ -4,10 +4,10 @@ import {Location} from './location'
 export class Asset {
 	
 	Id: number;
-	Vendor: string;
-	Name: string;
+	Vendor: string;//show in the asset-list
+	Name: string;//show in the asset-list
 	PurchaseDate: Date;
-	PurchaseOrderNumber: string;
+	PurchaseOrderNumber: string;//show in the asset-list
 	AssetCost: number;
 	OutForRepairDate: Date;
 	BackFromRepairDate: Date;
@@ -17,7 +17,7 @@ export class Asset {
 	PhotoPath: string;
 	Type: string;
 	Vehicle: Vehicle;
-	Location: Location;
+	Location: Location;//show in the asset-list
 	//ServiceRecord:ServiceRecord;
 	//We'll want to know which person and department an asset belongs to
 		

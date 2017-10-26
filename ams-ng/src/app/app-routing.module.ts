@@ -27,6 +27,10 @@ import {AssetService} from './shared/services/asset.service'
 import {VendorService} from './shared/services/vendor.service'
 import {VehicleService} from './shared/services/vehicle.service'
 
+import { SystemService } from './shared/services/system.service';
+import { UserService } from './shared/services/user.service';
+import { LocationService } from './shared/services/location.service';
+
 const approutes: Routes = [
 	{ path: '', redirectTo: '/', pathMatch: "full" },
 	{ path: 'about', component: core.AboutComponent },

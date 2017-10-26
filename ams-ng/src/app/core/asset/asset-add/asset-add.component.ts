@@ -16,7 +16,10 @@ export class AssetAddComponent implements OnInit {
 		//Once we have additional types of assets to work with,
 		//those will also be added here, and attached to the Asset
 	vehicle: Vehicle = new Vehicle("", "", "");
-	asset: Asset = new Asset (0, '', '', 0, '', '', 'Vehicle', this.vehicle); 
+	//Id, Vendor, Name, PurchaseDate, PurchaseOrderNumber, AssetCost, OutForRepairDate, BackFromRepairDate
+	//RetiredDate, SurplusDate, SalesProceeds, PhotoPath, Type, Vehicle, Location
+	asset: Asset = new Asset (0, '', '', new Date(), '', 0, new Date(), new Date(), 
+		new Date(), new Date(), 0, '', '', this.vehicle, this.location); 
 	
 	add() {
 		console.log("asset-add add()");

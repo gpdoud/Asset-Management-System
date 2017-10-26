@@ -33,6 +33,10 @@ import {AssetService} from './shared/services/asset.service'
 import {VehicleService} from './shared/services/vehicle.service'
 import {VendorService} from './shared/services/vendor.service'
 
+import { SystemService } from './shared/services/system.service';
+import { UserService } from './shared/services/user.service';
+import { LocationService } from './shared/services/location.service';
+
 
 @NgModule({
   declarations: [AppComponent, 
@@ -46,7 +50,7 @@ import {VendorService} from './shared/services/vendor.service'
     BrowserModule, RouterModule, AppRoutingModule, HttpModule, FormsModule, SharedModule, CoreModule
 
   ],
-  providers: [AssetService, VehicleService, VendorService],
+  providers: [AssetService, VehicleService, VendorService, SystemService, UserService, LocationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
