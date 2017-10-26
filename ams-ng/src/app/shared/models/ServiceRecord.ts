@@ -22,4 +22,4 @@ export class ServiceRecord {
 		this.Total = Total;
 		this.Notes = Notes;
 	}
-}
+} 
