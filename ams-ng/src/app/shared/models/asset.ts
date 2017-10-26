@@ -1,37 +1,62 @@
 import {Vehicle} from './vehicle'
+import {Location} from './location'
 
 export class Asset {
 	
 	Id: number;
 	Vendor: string;
 	Name: string;
-	Price: number;
-	Unit: string;
+	PurchaseDate: Date;
+	PurchaseOrderNumber: string;
+	AssetCost: number;
+	OutForRepairDate: Date;
+	BackFromRepairDate: Date;
+	RetiredDate: Date;
+	SurplusDate: Date;
+	SaleProceeds: number;
 	PhotoPath: string;
 	Type: string;
 	Vehicle: Vehicle;
+	Location: Location;
+	//ServiceRecord:ServiceRecord;
 	//We'll want to know which person and department an asset belongs to
 		
 	constructor(
 		Id: number,
 		Vendor: string,
 		Name: string,
-		Price: number,
-		Unit: string,
+		PurchaseDate: Date,
+		PurchaseOrderNumber: string,
+		AssetCost: number,
+		OutForRepairDate: Date,
+		BackFromRepairDate: Date,
+		RetiredDate: Date,
+		SurplusDate: Date,
+		SaleProceeds: number,
 		PhotoPath: string,
 		Type: string,
-		Vehicle: Vehicle
+		Vehicle: Vehicle,
+		Location: Location
+		//ServiceRecord: ServiceRecord
 		)
 
 	 {
 	 	this.Id = Id;
 	 	this.Vendor = Vendor;
 	 	this.Name = Name;
-	 	this.Price = Price;
-	 	this.Unit = Unit;
+	 	this.PurchaseDate = PurchaseDate;
+	 	this.PurchaseOrderNumber = PurchaseOrderNumber;
+	 	this.AssetCost = AssetCost;
+	 	this.OutForRepairDate = OutForRepairDate;
+	 	this.BackFromRepairDate = BackFromRepairDate;
+	 	this.RetiredDate = RetiredDate;
+	 	this.SurplusDate = SurplusDate;
+	 	this.SaleProceeds = SaleProceeds;
 	 	this.PhotoPath = PhotoPath;
 	 	this.Type = Type;
 	 	this.Vehicle = Vehicle;
+	 	this.Location = Location;
+	 	//this.ServiceRecord: ServiceRecord;
 	 	}
 
 
