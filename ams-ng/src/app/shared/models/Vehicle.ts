@@ -20,7 +20,7 @@ export class Vehicle {
 		VIN: string,
 		Make: string,
 		Model: string,
-		HasLights: boolean;
+		HasLights: boolean
 	) {
 		// this.Id = Id;
 		this.License = License;

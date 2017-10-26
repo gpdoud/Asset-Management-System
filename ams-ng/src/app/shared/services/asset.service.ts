@@ -21,11 +21,22 @@ export class AssetService {
 // Dummy data that we can test with
   //Here we have our fake vehicle information, which has three fields at the moment
 vehicle:Vehicle[]=[
-    {VIN: "Feature", Make: ".NET", Model: "Bootcamp"}
+    {License: "Feature", VIN: "TestGibberish", Make: ".NET", Model: "Bootcamp", HasLights: false}
 ];
-  //Here is our fake asset, which has our fake vehicle built into it
+  
+  //Id, Name, Department, Address, City, State, Phone
+  testLocation: Location[] = [
+    {Id: 0, Name: 'The Place', Department: 'Test Department', Address: 'Here', City: 'Queen City', State: 'Testing', Phone: '5558675309'}
+  ];
+  //Id, Vendor, Name, PurchaseDate, PurchaseOrderNumber, AssetCost, OutForRepairDate, BackFromRepairDate
+  //RetiredDate, SurplusDate, SalesProceeds, PhotoPath, Type, Vehicle, LocationId, Location
+//Here is our fake asset, which has our fake vehicle and location built into it
 asset: Asset[] = [
-     {Id: 1, Vendor: "KaBoom Cars", Name: "3", AssetCost: 4, Unit: "5", PhotoPath: "6", Type: "Vehicle", Vehicle: this.vehicle[0]}    
+     {Id: 1, Vendor: "KaBoom Cars", Name: "TNT", PurchaseDate: new Date(), PurchaseOrderNumber: '0', 
+     AssetCost: 4, OutForRepairDate: new Date(), BackFromRepairDate: new Date(), 
+     RetiredDate: new Date(), SurplusDate: new Date(), SaleProceeds: 0, PhotoPath: "6", 
+     Type: "Vehicle", Vehicle: this.vehicle[0], LocationId: 0, Location: this.testLocation[0], 
+     AssignedTo: 'Tester'}    
    ];
 
   
