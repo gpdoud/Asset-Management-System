@@ -1,10 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { Routes, RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from '@app/app-routing.module';
-import { CoreModule } from '@app/core/core.module';
 
 import { AppComponent } from '@app/app.component';
 import { Headers, Http } from '@angular/http';
@@ -34,8 +33,8 @@ import { UserEditComponent } from './core/user/user-edit/user-edit.component';
 import { UserAddComponent } from './core/user/user-add/user-add.component';
 
 import { LocationListComponent } from './core/location/location-list/location-list.component';
-import { LocationEditComponent } from './core/location/location-edit/location-edit.component';
 import { LocationDetailComponent } from './core/location/location-detail/location-detail.component';
+import { LocationEditComponent } from './core/location/location-edit/location-edit.component';
 import { LocationAddComponent } from './core/location/location-add/location-add.component';
 
 
@@ -61,8 +60,9 @@ import { LocationAddComponent } from './core/location/location-add/location-add.
     BrowserModule,
     RouterModule,
     AppRoutingModule,
-    CoreModule,
+    // CoreModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule
   ],
   providers: [
