@@ -4,22 +4,42 @@ import {Location} from './location'
 export class Asset {
 	
 	Id: number;
+	//Who sells the Asset?
 	Vendor: string;//show in the asset-list
+	//What is the Asset called?
 	Name: string;//show in the asset-list
+	//When was the Asset purchased?
 	PurchaseDate: Date;
+	//What is the Asset's Purchase Order Number?
 	PurchaseOrderNumber: string;//show in the asset-list
+	//How much money has been spent to buy and maintain the Asset?
 	AssetCost: number;
+	//When did the Asset go out for repair?
 	OutForRepairDate: Date;
+	//When did the Asset come back from repair?
 	BackFromRepairDate: Date;
+	//When did the Asset stop seeing usuage?
 	RetiredDate: Date;
+	//When was the Asset sold as surplus?
 	SurplusDate: Date;
+	//How much money was received for the Asset?
 	SaleProceeds: number;
+	//What is the file path for a picture of the Asset>
 	PhotoPath: string;
+	//Is the Asset Type a Vehicle, a piece of Equipment, or Furniture?
 	Type: string;
+	//If the Asset is a Vehicle, here is where that gets attached.
 	Vehicle: Vehicle;
+	//If the Asset is a piece of Equipment, here is where that gets attached.
+	//Equipment: Equipment;
+	//If the Asset is Furniture, here is where that gets attached.
+	//Furniture: Furniture;
+	//Where is the Asset?
 	Location: Location;//show in the asset-list
+	//Who is the person, or who are the people assigned to use the Asset?
+	AssignedTo: string;
+	//What is the Asset's Service Record?
 	//ServiceRecord:ServiceRecord;
-	//We'll want to know which person and department an asset belongs to
 		
 	constructor(
 		Id: number,
