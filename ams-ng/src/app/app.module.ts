@@ -6,7 +6,9 @@ import { FormsModule} from '@angular/forms';
 
 
 import { AppRoutingModule } from '@app/app-routing.module';
-import { CoreModule } from '@app/core/core.module';
+import { AboutComponent } from './core/about/about.component';
+import { HomeComponent } from './core/home/home.component';
+import { HelpComponent } from './core/help/help.component';
 import { SharedModule } from '@app/shared/shared.module';
 
 import { AppComponent } from '@app/app.component';
@@ -52,7 +54,7 @@ import { LocationService } from './shared/services/location.service';
 
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent, LoginComponent,
+  declarations: [AboutComponent, HelpComponent, HomeComponent, AppComponent, MenuComponent, LoginComponent,
   // VehicleAddComponent, VehicleDetailComponent, VehicleEditComponent, VehicleListComponent,
 
   VendorAddComponent, VendorDetailComponent, VendorEditComponent, VendorListComponent,
@@ -64,7 +66,7 @@ import { LocationService } from './shared/services/location.service';
   LocationListComponent, LocationEditComponent, LocationDetailComponent, LocationAddComponent
   ],
   imports: [
-    BrowserModule, RouterModule, AppRoutingModule, HttpModule, FormsModule, SharedModule, CoreModule
+    BrowserModule, RouterModule, AppRoutingModule, HttpModule, FormsModule, SharedModule
 
   ],
   providers: [AssetService, VehicleService, VendorService, SystemService, UserService, LocationService],
