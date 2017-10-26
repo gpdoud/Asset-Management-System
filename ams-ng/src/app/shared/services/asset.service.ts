@@ -16,14 +16,16 @@ const url: string = urlBase + mvcCtrl;
 @Injectable()
 export class AssetService {
 
-  licenseplate: string;
+  licenseplate: string = "";
   location: Location;
   
   
   constructor(private http: Http) {}
     
     search(): Promise<Asset[]> {
-        let parms = "?licenseplate=" + this.licenseplate + "&location=" + this.location.Id
+        let locId = (typeof this.location === "undefined") ? "" : this.location.Id;
+        let parms = "?licenseplate=" + this.licenseplate + "&location=" + locId;
+        console.log (parms);
         return this.http.get(url+'Search' + parms)
         .toPromise()
         .then(resp => resp.json() as Asset[])

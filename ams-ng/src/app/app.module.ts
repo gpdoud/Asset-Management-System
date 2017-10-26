@@ -12,6 +12,7 @@ import { AssetDetailComponent } from './core/asset/asset-detail/asset-detail.com
 import { AssetAddComponent } from './core/asset/asset-add/asset-add.component';
 import { AssetEditComponent } from './core/asset/asset-edit/asset-edit.component';
 import { AssetService } from './shared/services/asset.service';
+import { LocationService } from './shared/services/location.service';
 import { AboutComponent } from './core/about/about.component';
 import { HelpComponent } from './core/help/help.component';
 import { HomeComponent } from './core/home/home.component';
@@ -42,6 +43,7 @@ import { AssetSearchListComponent } from './core/asset/asset-search-list/asset-s
   ],
   providers: [
   AssetService,
+  LocationService
 
   ],
   bootstrap: [AppComponent]

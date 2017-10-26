@@ -4,7 +4,7 @@ import 'rxjs/add/operator/toPromise';
 
 import { Asset } from '../../../shared/models/asset';
 import { AssetService } from '../../../shared/services/asset.service';
-import { LocationService } from '../../shared/services/location.service';
+import { LocationService } from '../../../shared/services/location.service';
 import { Location } from '../../../shared/models/location';
 
 
@@ -15,7 +15,7 @@ import { Location } from '../../../shared/models/location';
 })
 export class AssetSearchComponent implements OnInit {
 	//these two variables represent the current search criteria for the user to enter
-	licenseplate: string;
+	licenseplate: string = "";
 	location: Location;
 	locations: Location []; 
 
@@ -31,10 +31,10 @@ export class AssetSearchComponent implements OnInit {
 		this.AssetSvc.location = this.location;
 		this.router.navigate(['/assets/search-list']);  
 	}
-  constructor(private AssetSvc: AssetService, private router: Router) { }
+  constructor(private AssetSvc: AssetService, private LocationSvc: LocationService, private router: Router) { }
 
   ngOnInit() {
-  //	this.getLocation();
+  this.getLocation();
   }
 
 }
