@@ -1,0 +1,83 @@
+<menu-comp></menu-comp>
+<div class="form-horizontal" style="margin: 20px;">
+
+	<div><span class="PageTitle">User Edit</span></div>
+
+	<div style="text-align: center;">
+
+	<form *ngIf="user" style="display: inline-block; width: 50%; padding: 30px 30px 0 0; border: 1px solid silver;">
+
+	<div class='form-group' >
+		<label class='col-md-3  control-label' for="user-firstname">First Name</label>
+		<div class='col-md-9'>
+			<input class='form-control' name='FirstName' type='text' id='user-firstname' 
+				[(ngModel)]='user.FirstName' 
+				placeholder="First Name">
+		</div>
+	</div>
+
+	<div class='form-group' >
+		<label class='col-md-3  control-label' for="user-lastname">Last Name</label>
+		<div class='col-md-9'>
+			<input class='form-control' name='LastName' type='text' id='user-lastname' 
+				[(ngModel)]='user.LastName' 
+				 placeholder="Last Name">
+		</div>
+	</div>
+
+	<div class='form-group' >
+		<label class='col-md-3  control-label' for="user-username">User Name</label>
+		<div class='col-md-9'>
+			<input class='form-control' name='UserName' type='text' id='user-username' 
+				[(ngModel)]='user.Username' 
+				 placeholder="User Name">
+		</div>
+	</div>
+
+	<div class='form-group' >
+		<label class='col-md-3  control-label' for="user-password">Password</label>
+		<div class='col-md-9'>
+			<input class='form-control' name='Password' type='Password' id='user-password' 
+				[(ngModel)]='user.Password' 
+				 placeholder="Password">
+		</div>
+	</div>
+
+	<div class='form-group' >
+		<label class='col-md-3  control-label' for="user-email">Email</label>
+		<div class='col-md-9'>
+			<input class='form-control' name='Email' type='text' id='user-email' 
+				[(ngModel)]='user.Email' 
+				 placeholder="Email">
+		</div>
+	</div>
+
+	<div class='form-group' >
+		<label class='col-md-3  control-label' for="user-adminlevel">AdminLevel</label>
+		<div class='col-md-9'>
+			<input class='form-control' name='AdminLevel' type='text' id='user-adminlevel' 
+				[(ngModel)]='user.AdminLevel' placeholder="AdminLevel">
+		</div>
+	</div>
+
+	<div class='form-group' >
+		<label class='col-md-3  control-label' for="user-is-active">Active</label>
+		<div class='col-md-9'>
+			<input class='form-control' name='Active' type='checkbox' id='user-is-active' 
+				[(ngModel)]='user.IsActive'
+				 placeholder="Active">
+		</div>
+	</div>
+
+	<div class='form-group'>
+		<button (click)='update()' id='update' class='col-md-11 col-md-offset-1 btn btn-primary'>Update</button>
+	</div>
+
+	<div class='form-group' >
+		<label class='col-md-10 col-md-offset-1 text-left'>{{message}}&nbsp;</label>
+	</div>
+
+	</form>
+
+	</div>
+</div>

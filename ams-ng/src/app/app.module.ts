@@ -11,6 +11,9 @@ import { SharedModule } from '@app/shared/shared.module';
 
 import { AppComponent } from '@app/app.component';
 
+import {MenuComponent} from './core/menu/menu.component';
+import { LoginComponent } from './core/login/login.component';
+
 //All of the work with a Vehicle is going to be handled by Asset, so we no longer need
 //these items, except for reference material
 // import {VehicleAddComponent} from './core/vehicle/vehicle-add/vehicle-add.component';
@@ -29,6 +32,16 @@ import {AssetAddComponent} from './core/asset/asset-add/asset-add.component';
 import { AssetSearchComponent } from './core/asset/asset-search/asset-search.component';
 import { AssetSearchListComponent } from './core/asset/asset-search-list/asset-search-list.component';
 
+import { UserListComponent } from './core/user/user-list/user-list.component';
+import { UserDetailComponent } from './core/user/user-detail/user-detail.component';
+import { UserEditComponent } from './core/user/user-edit/user-edit.component';
+import { UserAddComponent } from './core/user/user-add/user-add.component';
+
+import { LocationListComponent } from './core/location/location-list/location-list.component';
+import { LocationEditComponent } from './core/location/location-edit/location-edit.component';
+import { LocationDetailComponent } from './core/location/location-detail/location-detail.component';
+import { LocationAddComponent } from './core/location/location-add/location-add.component';
+
 import {AssetService} from './shared/services/asset.service'
 import {VehicleService} from './shared/services/vehicle.service'
 import {VendorService} from './shared/services/vendor.service'
@@ -39,12 +52,14 @@ import { LocationService } from './shared/services/location.service';
 
 
 @NgModule({
-  declarations: [AppComponent, 
+  declarations: [AppComponent, MenuComponent, LoginComponent,
   // VehicleAddComponent, VehicleDetailComponent, VehicleEditComponent, VehicleListComponent,
 
   VendorAddComponent, VendorDetailComponent, VendorEditComponent, VendorListComponent,
 
   AssetListComponent, AssetDetailComponent, AssetAddComponent, AssetSearchComponent, AssetSearchListComponent,
+
+  UserListComponent, UserDetailComponent, UserEditComponent, UserAddComponent
   ],
   imports: [
     BrowserModule, RouterModule, AppRoutingModule, HttpModule, FormsModule, SharedModule, CoreModule
