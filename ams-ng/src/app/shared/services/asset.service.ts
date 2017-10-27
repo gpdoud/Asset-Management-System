@@ -31,24 +31,16 @@ testVehicle:Vehicle[]=[
   //Id, Vendor, Name, PurchaseDate, PurchaseOrderNumber, AssetCost, OutForRepairDate, BackFromRepairDate
   //RetiredDate, SurplusDate, SalesProceeds, PhotoPath, Type, Vehicle, LocationId, Location
 //Here is our fake asset, which has our fake vehicle and location built into it
-testAsset: Asset[] = [
-     {Id: 1, Vendor: "KaBoom Cars", Name: "TNT", PurchaseDate: new Date(), PurchaseOrderNumber: '0', 
-     AssetCost: 4, OutForRepairDate: new Date(), BackFromRepairDate: new Date(), 
-     RetiredDate: new Date(), SurplusDate: new Date(), SaleProceeds: 0, PhotoPath: "6", 
-     Type: "Vehicle", Vehicle: this.testVehicle[0], LocationId: 0, Location: this.testLocation[0], 
-     AssignedTo: 'Tester'}    
-   ];
+testAsset: Asset[];
 
   
   constructor(private http: Http) {}
   
-//Dummy method to test with
-  dummydetail(){
-    return this.testAsset;
-  }
-    
+ 
     search(): Promise<Asset[]> {
-        let parms = "?licenseplate=" + this.licenseplate + "&location=" + this.location.Id
+        let locId = (typeof this.location === "undefined") ? "" : this.location.Id;
+        let parms = "?licenseplate=" + this.licenseplate + "&location=" + locId;
+        console.log (parms);
         return this.http.get(url+'Search' + parms)
         .toPromise()
         .then(resp => resp.json() as Asset[])
