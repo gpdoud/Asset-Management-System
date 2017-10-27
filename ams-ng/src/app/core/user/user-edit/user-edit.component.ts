@@ -22,6 +22,15 @@ export class UserEditComponent implements OnInit {
 		)
 	}
 
+    remove() {
+    console.log("remove()");
+    this.UserSvc.remove(this.user)
+      .then(resp => { 
+        console.log(resp); 
+        this.router.navigate(["/users"]); 
+      });
+  }
+
 
   constructor(private UserSvc: UserService, 
   	private route: ActivatedRoute, 

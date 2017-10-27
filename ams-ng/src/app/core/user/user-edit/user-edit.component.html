@@ -1,11 +1,9 @@
 <menu-comp></menu-comp>
-<div class="MainContent form-horizontal" style="margin: 20px;">
+<div class="MainContent form-horizontal firstDivAddEditList">
 
-	<div style="text-align: center;">
+	<div class="pageTitle"><div><span><h2>Edit User</h2></span></div>
 
-	<div><span class="PageTitle"><h2>Edit User</h2></span></div>
-
-	<form *ngIf="user" style="display: inline-block; width: 50%; padding: 30px 30px 0 0; border: 1px solid silver;">
+	<form class="addEditForm" *ngIf="user">
 
 	<div class='form-group' >
 		<label class='col-md-3  control-label' for="user-firstname">First Name</label>
@@ -52,7 +50,8 @@
 	</div>
 
 	<div class='form-group'>
-		<button (click)='update()' id='update' class='col-md-11 col-md-offset-1 btn btn-primary'>Update</button>
+		<button (click)='update()' id='update' class='col-md-11 col-md-offset-1 btn btn-success'>Update</button> &nbsp;
+		<button (click)='remove()' id='remove' class="col-md-11 col-md-offset-1 btn btn-danger">Delete</button>
 	</div>
 
 	<div class='form-group' >
