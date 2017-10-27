@@ -27,6 +27,8 @@ import { AssetService } from './shared/services/asset.service';
 import { UserService } from './shared/services/user.service';
 import { LocationService } from './shared/services/location.service';
 
+import {AssetListComponent} from './core/asset/asset-list/asset-list.component';
+import {AssetDetailComponent} from './core/asset/asset-detail/asset-detail.component';
 import { AssetSearchComponent } from './core/asset/asset-search/asset-search.component';
 import { AssetSearchListComponent } from './core/asset/asset-search-list/asset-search-list.component';
 
@@ -51,6 +53,8 @@ import { LocationAddComponent } from './core/location/location-add/location-add.
     MenuComponent,
     LoginComponent,
     HelpComponent,
+    AssetListComponent,
+    AssetDetailComponent,
     AssetSearchComponent,
     AssetSearchListComponent,
     UserListComponent, 
