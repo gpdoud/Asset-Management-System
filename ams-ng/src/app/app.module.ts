@@ -23,8 +23,12 @@ import { LoginComponent } from './core/login/login.component';
 import { MenuComponent } from './core/menu/menu.component';
 
 import { SystemService } from './shared/services/system.service';
+import { AssetService } from './shared/services/asset.service';
 import { UserService } from './shared/services/user.service';
 import { LocationService } from './shared/services/location.service';
+
+import { AssetSearchComponent } from './core/asset/asset-search/asset-search.component';
+import { AssetSearchListComponent } from './core/asset/asset-search-list/asset-search-list.component';
 
 
 import { UserListComponent } from './core/user/user-list/user-list.component';
@@ -47,6 +51,8 @@ import { LocationAddComponent } from './core/location/location-add/location-add.
     MenuComponent,
     LoginComponent,
     HelpComponent,
+    AssetSearchComponent,
+    AssetSearchListComponent,
     UserListComponent, 
     UserDetailComponent, 
     UserEditComponent, 
@@ -68,6 +74,7 @@ import { LocationAddComponent } from './core/location/location-add/location-add.
   providers: [
       UserService,
       SystemService,
+      AssetService,
       LocationService],
   bootstrap: [AppComponent]
 })
