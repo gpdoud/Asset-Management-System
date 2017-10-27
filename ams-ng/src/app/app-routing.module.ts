@@ -13,6 +13,9 @@ import { UserDetailComponent } from './core/user/user-detail/user-detail.compone
 import { UserEditComponent } from './core/user/user-edit/user-edit.component';
 import { UserAddComponent } from './core/user/user-add/user-add.component';
 
+import { AssetSearchComponent } from './core/asset/asset-search/asset-search.component';
+import { AssetSearchListComponent } from './core/asset/asset-search-list/asset-search-list.component';
+
 import { LocationListComponent } from './core/location/location-list/location-list.component';
 import { LocationDetailComponent } from './core/location/location-detail/location-detail.component';
 import { LocationEditComponent } from './core/location/location-edit/location-edit.component';
@@ -24,6 +27,9 @@ const approutes: Routes = [
 	{ path: 'help', component: HelpComponent },
 	{ path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
+
+   { path: 'assets/search', component: AssetSearchComponent},
+  { path: 'assets/search-list', component: AssetSearchListComponent},
   
   { path: "users", component: UserListComponent },
   { path: "users/detail/:id", component: UserDetailComponent },
