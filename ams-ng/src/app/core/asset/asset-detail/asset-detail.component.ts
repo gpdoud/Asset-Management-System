@@ -6,7 +6,6 @@ import 'rxjs/add/operator/switchMap';
 import { Asset } from '../../../shared/models/asset';
 import { AssetService } from '../../../shared/services/asset.service';
 import { Vehicle } from '../../../shared/models/vehicle';
-import { VehicleAsset } from '../../../shared/models/VehicleAsset';
 
 
 @Component({
@@ -17,7 +16,6 @@ import { VehicleAsset } from '../../../shared/models/VehicleAsset';
 export class AssetDetailComponent implements OnInit {
 vehicle: Vehicle;
 asset: Asset;
-vehicleAsset: VehicleAsset;
 
 remove() {
     console.log("remove()");
