@@ -22,6 +22,15 @@ export class LocationEditComponent implements OnInit {
 		)
 	}
 
+  remove() {
+    console.log("remove()");
+    this.LocationSvc.remove(this.location)
+      .then(resp => { 
+        console.log(resp); 
+        this.router.navigate(["/locations"]); 
+      });
+  }
+
   constructor(private LocationSvc: LocationService, 
   	private route: ActivatedRoute, 
   	private router: Router) { }
