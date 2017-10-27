@@ -13,6 +13,8 @@ import { UserDetailComponent } from './core/user/user-detail/user-detail.compone
 import { UserEditComponent } from './core/user/user-edit/user-edit.component';
 import { UserAddComponent } from './core/user/user-add/user-add.component';
 
+import {AssetListComponent} from './core/asset/asset-list/asset-list.component';
+import {AssetDetailComponent} from './core/asset/asset-detail/asset-detail.component';
 import { AssetSearchComponent } from './core/asset/asset-search/asset-search.component';
 import { AssetSearchListComponent } from './core/asset/asset-search-list/asset-search-list.component';
 
@@ -27,7 +29,9 @@ const approutes: Routes = [
 	{ path: 'help', component: HelpComponent },
 	{ path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-
+  
+  { path: 'assets', component: AssetListComponent},
+  { path: 'assets/detail/:id', component: AssetDetailComponent},
    { path: 'assets/search', component: AssetSearchComponent},
   { path: 'assets/search-list', component: AssetSearchListComponent},
   
