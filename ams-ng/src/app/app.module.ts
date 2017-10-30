@@ -43,6 +43,8 @@ import { LocationDetailComponent } from './core/location/location-detail/locatio
 import { LocationEditComponent } from './core/location/location-edit/location-edit.component';
 import { LocationAddComponent } from './core/location/location-add/location-add.component';
 
+import { AssetChildDetailComponent } from './core/asset-child/asset-child-detail/asset-child-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -64,7 +66,8 @@ import { LocationAddComponent } from './core/location/location-add/location-add.
     LocationListComponent,
     LocationEditComponent,
     LocationDetailComponent,
-    LocationAddComponent
+    LocationAddComponent,
+    AssetChildDetailComponent
   ],
   imports: [
     BrowserModule,
