@@ -6,7 +6,8 @@ import 'rxjs/add/operator/switchMap';
 import { Asset } from '../../../shared/models/asset';
 import { AssetService } from '../../../shared/services/asset.service';
 import { Vehicle } from '../../../shared/models/vehicle';
-
+import { Location } from '../../../shared/models/location';
+import { LocationService } from '../../../shared/services/location.service';
 
 @Component({
   selector: 'app-asset-detail',
@@ -15,6 +16,7 @@ import { Vehicle } from '../../../shared/models/vehicle';
 })
 export class AssetDetailComponent implements OnInit {
 vehicle: Vehicle;
+locations: Location[];
 asset: Asset;
 
 remove() {
@@ -36,7 +38,7 @@ remove() {
   } 	
 
   constructor(private AssetSvc: AssetService, private router: Router, 
-  	private route: ActivatedRoute) { }
+  	private route: ActivatedRoute, private LocService: LocationService) { }
 
   ngOnInit() {
   	this.route.paramMap
@@ -46,6 +48,9 @@ remove() {
           this.AssetSvc.get(params.get('id')))
   			.subscribe((asset: Asset) => { this.asset = asset; 
           console.log("asset"); console.log(asset); console.log("this.asset");console.log(this.asset);});
+        this.LocService.list()
+          .then(
+            resp => this.locations = resp);
         
   }
 
