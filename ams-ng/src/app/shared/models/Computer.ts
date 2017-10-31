@@ -9,6 +9,7 @@ export class Computer {
 	CPU: string;
 	RAM: string;
 	HDD: string;
+	asset: Asset;
 		
 	constructor(
 		
@@ -18,6 +19,8 @@ export class Computer {
 		CPU: string,
 		RAM: string,
 		HDD: string,
+		asset: Asset,
+     
 			)
 
 	 {
@@ -28,6 +31,8 @@ export class Computer {
 	 	this.CPU = CPU;
 	 	this.RAM = RAM;
 	 	this.HDD = HDD;
+	 	this.asset = asset;
+
 	 	
 	 	}
 
