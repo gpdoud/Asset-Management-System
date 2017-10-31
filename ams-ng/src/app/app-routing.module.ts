@@ -13,6 +13,7 @@ import { UserDetailComponent } from './core/user/user-detail/user-detail.compone
 import { UserEditComponent } from './core/user/user-edit/user-edit.component';
 import { UserAddComponent } from './core/user/user-add/user-add.component';
 
+import {AssetAddComponent} from './core/asset/asset-add/asset-add.component';
 import {AssetListComponent} from './core/asset/asset-list/asset-list.component';
 import {AssetDetailComponent} from './core/asset/asset-detail/asset-detail.component';
 import { AssetSearchComponent } from './core/asset/asset-search/asset-search.component';
@@ -23,6 +24,8 @@ import { LocationDetailComponent } from './core/location/location-detail/locatio
 import { LocationEditComponent } from './core/location/location-edit/location-edit.component';
 import { LocationAddComponent } from './core/location/location-add/location-add.component';
 
+import { ComputerAddComponent } from './core/computer/computer-add/computer-add.component';
+
 const approutes: Routes = [
 	{ path: '', redirectTo: '/', pathMatch: "full" },
 	{ path: 'about', component: AboutComponent },
@@ -30,6 +33,7 @@ const approutes: Routes = [
 	{ path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   
+  { path: 'assets/add', component: AssetAddComponent},
   { path: 'assets', component: AssetListComponent},
   { path: 'assets/detail/:id', component: AssetDetailComponent},
    { path: 'assets/search', component: AssetSearchComponent},
@@ -44,7 +48,9 @@ const approutes: Routes = [
   { path: "locations/detail/:id", component: LocationDetailComponent },
   { path: "locations/edit/:id", component: LocationEditComponent },
   { path: "locations/add", component: LocationAddComponent },
-  { path: '**', component: HomeComponent },
+  
+  { path: "computers/add", component: ComputerAddComponent },
+  { path: '**', component: AssetListComponent },
 ];
 
 @NgModule({
