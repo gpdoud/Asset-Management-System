@@ -26,6 +26,7 @@ import { SystemService } from './shared/services/system.service';
 import { AssetService } from './shared/services/asset.service';
 import { UserService } from './shared/services/user.service';
 import { LocationService } from './shared/services/location.service';
+import { ComputerService } from './shared/services/computer.service';
 
 import {AssetListComponent} from './core/asset/asset-list/asset-list.component';
 import {AssetDetailComponent} from './core/asset/asset-detail/asset-detail.component';
@@ -82,7 +83,9 @@ import { AssetChildDetailComponent } from './core/asset-child/asset-child-detail
       UserService,
       SystemService,
       AssetService,
-      LocationService],
+      LocationService,
+      ComputerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
