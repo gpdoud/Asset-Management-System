@@ -28,6 +28,7 @@ import { UserService } from './shared/services/user.service';
 import { LocationService } from './shared/services/location.service';
 import { ComputerService } from './shared/services/computer.service';
 
+import {AssetAddComponent} from './core/asset/asset-add/asset-add.component';
 import {AssetListComponent} from './core/asset/asset-list/asset-list.component';
 import {AssetDetailComponent} from './core/asset/asset-detail/asset-detail.component';
 import { AssetSearchComponent } from './core/asset/asset-search/asset-search.component';
@@ -58,6 +59,7 @@ import { ComputerAddComponent } from './core/computer/computer-add/computer-add.
     MenuComponent,
     LoginComponent,
     HelpComponent,
+    AssetAddComponent,
     AssetListComponent,
     AssetDetailComponent,
     AssetSearchComponent,
@@ -89,7 +91,7 @@ import { ComputerAddComponent } from './core/computer/computer-add/computer-add.
       AssetService,
       LocationService,
       ComputerService
-  ],
+      ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
