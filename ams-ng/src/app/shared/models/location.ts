@@ -7,8 +7,8 @@ export class Location {
 	City: string;
 	State: string;
 	Phone: string;
-	
-	
+
+
 	constructor(
 		Id: number,
 		Name: string,
@@ -16,20 +16,14 @@ export class Location {
 		Address: string,
 		City: string,
 		State: string,
-		Phone: string,
-				
-	)
-
-	 {
-	 	this.Id = Id;
-	 	this.Name = Name;
-	  	this.Department = Department;
-	 	this.Address = Address;
-	 	this.City = City;
-	 	this.State = State;
-	 	this.Phone = Phone;
-	 	 	
-	 	}
-
-
+		Phone: string
+	) {
+		this.Id = Id;
+		this.Name = Name;
+		this.Department = Department;
+		this.Address = Address;
+		this.City = City;
+		this.State = State;
+		this.Phone = Address;
+	}
 }

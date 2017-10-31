@@ -1,3 +1,4 @@
+//Make sure to import the models that an Asset may refer to
 import {Vehicle} from './vehicle'
 import {Location} from './location'
 

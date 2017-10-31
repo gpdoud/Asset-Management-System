@@ -4,6 +4,7 @@ import { Asset } from '../../../shared/models/asset';
 import { Vehicle } from '../../../shared/models/vehicle';
 import { Location } from '../../../shared/models/location';
 import { AssetService } from '../../../shared/services/asset.service';
+import { LocationService } from '../../../shared/services/location.service';
 
 @Component({
   selector: 'app-asset-add',
@@ -19,13 +20,16 @@ export class AssetAddComponent implements OnInit {
 	
 	//License plate, VIN, Make, Model, HasLights (Utility/Emergency lights)
 	vehicle: Vehicle = new Vehicle('', '', '', '', false);
-	//Id, Name, Department, Address, City, State, Phone
-	location: Location = new Location(0, '', '', '', '', '', '');
+
+	// list of locations to populate drop-down
+  	locations: Location[];
 	//Id, Vendor, Name, PurchaseDate, PurchaseOrderNumber, AssetCost, OutForRepairDate, BackFromRepairDate
 	//RetiredDate, SurplusDate, SalesProceeds, PhotoPath, Type, Vehicle, LocationId, Location
 	asset: Asset = new Asset (0, '', '', new Date(), '', 0, new Date(), new Date(), 
-		new Date(), new Date(), 0, '', '', this.vehicle, 0, this.location); 
+		new Date(), new Date(), 0, '', '', this.vehicle, 0, null); 
 	
+	
+
 	add() {
 		console.log("asset-add add()");
 		console.log(this.asset);
@@ -37,9 +41,12 @@ export class AssetAddComponent implements OnInit {
 	}
 	
   constructor(private AssetSvc: AssetService, 
-	private router: Router) { }
+	private router: Router, private LocService: LocationService) { }
 
   ngOnInit() {
+  	this.LocService.list()
+          .then(
+            resp => this.locations = resp);
   }
 
 }

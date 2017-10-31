@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
-import { Location } from '../models/Location';
+import { Location } from '../models/location';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
 

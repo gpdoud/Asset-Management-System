@@ -1,10 +1,13 @@
-<div>
+<menu-comp></menu-comp>
+<div id="firstDivAddEditList" class ="MainContent form-horizontal">
 
-	<div>
-		<span class="PageTitle">Asset List</span>
-		<span class="CreateNew"><a routerLink="/assets/add">Add New</a></span>
-	</div>
+	<div class="pageTitle">
+		<span>Assets</span>
+		<button id='add' class='btn btn-primary' routerLink="/assets/add">Add New</button>
+	  		<button id='search' class='btn btn-info' routerLink="/assets/search">Search</button>
+  </div>
 
+	<div style=""> 
 	<table class="table" *ngIf="assets">
 	<tr>
 		<th>Name</th>
@@ -28,4 +31,5 @@
 	</tr>
 	</table>
 
+	</div>
 </div>

@@ -1,0 +1,98 @@
+<!-- This is the HTML to display the general Asset information -->
+<div class="MainContent form-horizontal" style="text-align: center;">
+	<div> 
+
+	<form id="addEditForm2Columns" class="addEditForm">  
+
+	<div class='form-group'>
+		<label class='col-md-2 control-label' for="asset-name">Name</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='Name' type= 'text' id='asset-name' 
+			[(ngModel)]='asset.Name' placeholder="Name">
+		</div>
+		<label class='col-md-2 control-label' for="asset-location-name">Location</label>
+		<div class='col-md-4'>
+			<select [(ngModel)]='asset.LocationId' class='form-control' name='Location' id='asset-location-name'>
+				<option *ngFor="let location of locations" [ngValue]="location.Id">{{location.Name}}</option>
+			</select>
+		</div>
+	</div>
+
+	<div class='form-group'>
+		<label class='col-md-2 control-label' for="asset-vendor">Vendor</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='Vendor' type= 'text' id='asset-vendor' 
+   			[(ngModel)]='asset.Vendor' placeholder="Vendor">
+   		</div>
+		<label class='col-md-2 control-label' for="asset-PurchaseDate">Purchase Date</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='PurchaseDate' type= 'text' id='asset-PurchaseDate' 
+   			[(ngModel)]='asset.PurchaseDate' placeholder="Purchase Date">
+		</div>
+	</div>
+
+	<div class='form-group'>
+		<label class='col-md-2 control-label' for="asset-PurchaseOrderNumber">Purchase Order #</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='PurchaseOrderNumber' type= 'text' id='asset-PurchaseOrderNumber' 
+   			[(ngModel)]='asset.PurchaseOrderNumber' placeholder="Purchase Order Number">
+   		</div>
+		<label class='col-md-2 control-label' for="asset-AssetCost">Asset Cost</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='AssetCost' type= 'text' id='asset-AssetCost' 
+   			[(ngModel)]='asset.AssetCost' placeholder="Asset Cost">
+		</div>
+	</div>
+
+   <div class='form-group'>
+		<label class='col-md-2 control-label' for="asset-OutForRepairDate">Out For Repair Date</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='OutForRepairDate' type= 'text' id='asset-OutForRepairDate' [(ngModel)]='asset.OutForRepairDate' placeholder="Out For Repair Date">
+   		</div>
+		<label class='col-md-2 control-label' for="asset-BackFromRepairDate">Back From Repair Date</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='BackFromRepairDate' type= 'text' id='asset-BackFromRepairDate' [(ngModel)]='asset.BackFromRepairDate' placeholder="Back From Repair Date">
+		</div>
+	</div>
+
+   <div class='form-group'>
+		<label class='col-md-2 control-label' for="asset-RetiredDate">Retired Date</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='RetiredDate' type= 'text' id='asset-RetiredDate' 
+			[(ngModel)]='asset.RetiredDate' placeholder="Retired Date">
+   		</div>
+		<label class='col-md-2 control-label' for="asset-SurplusDate">Surplus Date</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='SurplusDate' type= 'text' id='asset-SurplusDate' 
+			[(ngModel)]='asset.SurplusDate' placeholder="Surplus Date">
+		</div>
+	</div>
+
+	<div class='form-group'>
+		<label class='col-md-2 control-label' for="asset-SaleProceeds">Sale Proceeds</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='SaleProceeds' type= 'text' id='asset-SaleProceeds' 
+			[(ngModel)]='asset.SaleProceeds' placeholder="Sale Proceeds">
+   		</div>
+		<label class='col-md-2 control-label' for="asset-photopath">Photo Path</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='PhotoPath' type= 'text' id='asset-photopath' 
+			[(ngModel)]='asset.PhotoPath' placeholder="PhotoPath">
+		</div>
+	</div>
+
+	<div class='form-group'>
+		<label class='col-md-2 control-label' for="asset-type">Type</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='Type' type= 'text' id='asset-type' 
+			[(ngModel)]='asset.Type' placeholder="Type">
+		</div>
+		<label class='col-md-2 control-label' for="asset-AssignedTo">Assigned To</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='AssignedTo' type= 'text' id='asset-AssignedTo' 
+			[(ngModel)]='asset.AssignedTo' placeholder="Assigned To">
+		</div>
+	</div>
+</form>
+</div>
+</div>
