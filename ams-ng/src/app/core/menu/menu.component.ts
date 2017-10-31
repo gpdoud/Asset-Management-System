@@ -17,11 +17,12 @@ export class MenuComponent implements OnInit {
   	loggedInUser: User;
 
 	menus: Menu[] = [
-	  new Menu("BROWSE ", "/assets", "Home menu item"),
+    // new Menu("BROWSE ", "/assets", "Home menu item"),
     new Menu("LOGIN ", "/login", "Login menu item"),
   	new Menu("USERS ", "/users", "Users menu item"),
   	// new Menu("VENDORS ", "/vendors", "Vendor menu item"),
   	new Menu("ASSETS ", "/assets", "Asset menu item"),
+    new Menu("SEARCH ", "/assets/search", "Search menu item"),
   	// new Menu("VEHICLES ", "/vehicles", "Vehicles menu item"),
   	// new Menu("RECORDS ", "/records", "Records menu item"),
   	// new Menu("DOCUMENTS ", "/documents", "Documents menu item"),
