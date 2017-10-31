@@ -50,7 +50,7 @@ const approutes: Routes = [
   { path: "locations/add", component: LocationAddComponent },
   
   { path: "computers/add", component: ComputerAddComponent },
-  { path: '**', component: HomeComponent },
+  { path: '**', component: AssetListComponent },
 ];
 
 @NgModule({
