@@ -21,20 +21,20 @@ export class ComputerDetailComponent implements OnInit {
 	computer: Computer;
   assets: Asset[];
 
-	remove() {
+	/*remove() {
     console.log("remove()");
     this.ComputerSvc.remove(this.computer)
         .then(resp => {
           console.log(resp);
-          this.router.navigate(["/computers"]);
+          this.router.navigate(["/assets"]);
         });
-  }
+  } */
 
  	update() {
 		this.ComputerSvc.change(this.computer).then(
 			resp => {
 				console.log(resp);
-				this.router.navigate(['/computers']);
+				this.router.navigate(['/assets']);
 			})
 	}
 

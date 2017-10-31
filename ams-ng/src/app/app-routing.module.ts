@@ -23,6 +23,8 @@ import { LocationDetailComponent } from './core/location/location-detail/locatio
 import { LocationEditComponent } from './core/location/location-edit/location-edit.component';
 import { LocationAddComponent } from './core/location/location-add/location-add.component';
 
+import { AssetChildDetailComponent } from './core/asset-child/asset-child-detail/asset-child-detail.component';
+
 import { ComputerDetailComponent } from './core/computer/computer-detail/computer-detail.component';
 
 
@@ -37,6 +39,8 @@ const approutes: Routes = [
   { path: 'assets/detail/:id', component: AssetDetailComponent},
    { path: 'assets/search', component: AssetSearchComponent},
   { path: 'assets/search-list', component: AssetSearchListComponent},
+
+  { path: 'asset-childs/detail/:id', component: AssetChildDetailComponent},
   
   { path: "users", component: UserListComponent },
   { path: "users/detail/:id", component: UserDetailComponent },
