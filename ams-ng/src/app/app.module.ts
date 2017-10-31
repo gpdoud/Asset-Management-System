@@ -26,6 +26,7 @@ import { SystemService } from './shared/services/system.service';
 import { AssetService } from './shared/services/asset.service';
 import { UserService } from './shared/services/user.service';
 import { LocationService } from './shared/services/location.service';
+import { ComputerService } from './shared/services/computer.service';
 
 import {AssetListComponent} from './core/asset/asset-list/asset-list.component';
 import {AssetDetailComponent} from './core/asset/asset-detail/asset-detail.component';
@@ -42,6 +43,7 @@ import { LocationListComponent } from './core/location/location-list/location-li
 import { LocationDetailComponent } from './core/location/location-detail/location-detail.component';
 import { LocationEditComponent } from './core/location/location-edit/location-edit.component';
 import { LocationAddComponent } from './core/location/location-add/location-add.component';
+import { ComputerDetailComponent } from './core/computer/computer-detail/computer-detail.component';
 
 
 @NgModule({
@@ -64,7 +66,8 @@ import { LocationAddComponent } from './core/location/location-add/location-add.
     LocationListComponent,
     LocationEditComponent,
     LocationDetailComponent,
-    LocationAddComponent
+    LocationAddComponent,
+    ComputerDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -79,7 +82,8 @@ import { LocationAddComponent } from './core/location/location-add/location-add.
       UserService,
       SystemService,
       AssetService,
-      LocationService],
+      LocationService,
+      ComputerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

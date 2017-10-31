@@ -2,7 +2,7 @@ import {Asset} from './asset'
 
 export class Computer {
 	
-	
+	AssetId: number;
 	ModelNumber: string;
 	SerialNumber: string;
 	OperatingSystem: string;
@@ -13,6 +13,7 @@ export class Computer {
 		
 	constructor(
 		
+		AssetId: number,
 		ModelNumber: string,
 		SerialNumber: string,
 		OperatingSystem:string,
@@ -24,6 +25,7 @@ export class Computer {
 
 	 {
 	 
+	 	this.AssetId = AssetId;
 	 	this.ModelNumber = ModelNumber;
 	 	this.SerialNumber = SerialNumber;
 	 	this.OperatingSystem = OperatingSystem;

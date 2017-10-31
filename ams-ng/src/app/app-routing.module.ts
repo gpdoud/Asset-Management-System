@@ -23,6 +23,9 @@ import { LocationDetailComponent } from './core/location/location-detail/locatio
 import { LocationEditComponent } from './core/location/location-edit/location-edit.component';
 import { LocationAddComponent } from './core/location/location-add/location-add.component';
 
+import { ComputerDetailComponent } from './core/computer/computer-detail/computer-detail.component';
+
+
 const approutes: Routes = [
 	{ path: '', redirectTo: '/', pathMatch: "full" },
 	{ path: 'about', component: AboutComponent },
@@ -44,6 +47,9 @@ const approutes: Routes = [
   { path: "locations/detail/:id", component: LocationDetailComponent },
   { path: "locations/edit/:id", component: LocationEditComponent },
   { path: "locations/add", component: LocationAddComponent },
+
+  { path: "computers/detail/:id", component: ComputerDetailComponent },
+
   { path: '**', component: HomeComponent },
 ];
 

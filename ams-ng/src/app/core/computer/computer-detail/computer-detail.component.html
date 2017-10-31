@@ -1,0 +1,72 @@
+<menu-comp></menu-comp>
+<app-asset-child-detail *ngIf="computer" [asset]= "computer.Asset"> </app-asset-child-detail>
+<div class="MainContent form-horizontal" style="text-align: center;">
+    <div>
+    	<span class="pageTitle"><h2>Computer Detail</h2></span>
+		<button id='add' class='btn btn-primary' routerLink="/computers/add">Add New</button> -->
+	</div>
+
+	<div> 
+	<form *ngIf="computer">  
+		<div class='form-group'>
+		<label class='col-md-3 control-label' for="computer-modelnumber">Model Number</label>
+		<div class='col-md-9'>
+			<input class='form-control' name='ModelNumber' type= 'text' id='computer-modelnumber' [(ngModel)]='computer.ModelNumber' placeholder="ModelNumber">
+		</div>
+	</div>
+
+	<div class='form-group'>
+		<label class='col-md-3 control-label' for="computer-serialnumber">Serial Number</label>
+		<div class='col-md-9'>
+			<input class='form-control' name='SerialNumber' type= 'text'
+			 id='computer-serialnumber'
+			[(ngModel)]='computer.SerialNumber' placeholder="SerialNumber">
+		</div>
+	</div>
+
+	<div class='form-group'>
+		<label class='col-md-3 control-label' 
+		for="computer-operatingsystem">Operating System</label>
+		<div class='col-md-9'>
+			<input class='form-control' name='OperatingSystem' type= 'text'
+			 id='computer-operatingsystem'
+			[(ngModel)]='computer.OperatingSystem' placeholder="OperatingSystem">
+		</div>
+	</div>
+
+	<div class='form-group'>
+		<label class='col-md-3 control-label' for="computer-cpu">CPU</label>
+		<div class='col-md-9'>
+			<input class='form-control' name='CPU' type= 'text' id='computer-CPU'
+			[(ngModel)]='computer.CPU' placeholder="CPU">
+		</div>
+	</div>
+
+	<div class='form-group'>
+		<label class='col-md-3 control-label' for="computer-RAM">RAM</label>
+		<div class='col-md-9'>
+			<input class='form-control' name='RAM' type= 'text' id='computer-RAM'
+			[(ngModel)]='computer.RAM' placeholder="RAM">
+		</div>
+	</div>
+
+	<div class='form-group'>
+		<label class='col-md-3 control-label' for="computer-HDD">HDD</label>
+		<div class='col-md-9'>
+			<input class='form-control' name='HDD' type= 'text' id='computer-HDD'
+			[(ngModel)]='computer.HDD' placeholder="HDD">
+		</div>
+	</div>
+
+	<div class="text-center">
+		<button (click)='update()' id='update' class='col-md-5 col-md-offset-1 btn btn-warning'>Update</button> 
+		<button (click)="remove()" class="col-md-5 col-md-offset-1 btn btn-danger">Delete</button>
+	</div>
+
+	<div class='form-group'>
+		<label class='col-md-10 col-md-offset-1 text-left'>{{message}}&nbsp;</label>
+	</div>
+	</form>
+
+	</div>
+</div>
