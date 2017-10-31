@@ -20,6 +20,7 @@ export class Computer {
 		RAM: string,
 		HDD: string,
 		asset: Asset,
+     
 			)
 
 	 {
@@ -31,6 +32,7 @@ export class Computer {
 	 	this.RAM = RAM;
 	 	this.HDD = HDD;
 	 	this.asset = asset;
+
 	 	
 	 	}
 
