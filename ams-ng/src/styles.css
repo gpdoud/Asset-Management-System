@@ -1,18 +1,56 @@
-.table {
+#table {
 	margin: 30px;
+	margin-top: 15px;
 }
 
-.firstDivAddEditList { 
-	margin: 20px; 
+#firstDivAddEditList { 
+	margin-left: auto;
+	margin-right:auto;
+	margin-top: 10px;
 }
 
-.addEditForm { 
-	display: inline-block; 
-	width: 50%; 
+#addEditForm { 
+	text-align: left;
+	display: inline-block;
+	width: 40%; 
 	padding: 30px 30px 0 0; 
 	border: 1px solid silver; 
 }
 
+#addEditForm2Columns { 
+	text-align: left;
+	display: inline-block;
+	width: 80%; 
+	padding: 30px 30px 0 0; 
+	border: 1px solid silver; 
+}
+
+.addEditDiv {
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right:auto;
+	margin-top: 5px;
+}
+
 .pageTitle {
 	text-align: center;
+
+}
+
+div.pageTitle span {
+	font-size: 37px;
+}
+
+div.pageTitle span #search {
+	font-size: 37px;
+	color: blue;
+}
+
+div.pageTitle button {
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+	;
 }
