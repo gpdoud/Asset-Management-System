@@ -44,8 +44,10 @@ import { LocationDetailComponent } from './core/location/location-detail/locatio
 import { LocationEditComponent } from './core/location/location-edit/location-edit.component';
 import { LocationAddComponent } from './core/location/location-add/location-add.component';
 
+import { AssetChildAddComponent } from './core/asset-child/asset-child-add/asset-child-add.component';
 import { AssetChildDetailComponent } from './core/asset-child/asset-child-detail/asset-child-detail.component';
 
+import { ComputerAddComponent } from './core/computer/computer-add/computer-add.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +70,9 @@ import { AssetChildDetailComponent } from './core/asset-child/asset-child-detail
     LocationEditComponent,
     LocationDetailComponent,
     LocationAddComponent,
-    AssetChildDetailComponent
+    AssetChildAddComponent,
+    AssetChildDetailComponent,
+    ComputerAddComponent
   ],
   imports: [
     BrowserModule,
