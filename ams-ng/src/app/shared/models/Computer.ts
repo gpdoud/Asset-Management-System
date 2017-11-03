@@ -2,14 +2,20 @@ import {Asset} from './asset'
 
 export class Computer {
 	
-	
+	//What is the Model Number that identifies the type of computer?
 	ModelNumber: string;
+	//What is the Serial Number that identifies the specific computer?
 	SerialNumber: string;
+	//What is the Operating System? Windows, Linux, MacOS?
 	OperatingSystem: string;
+	//What are the statistics for the Central Processing Unit?
 	CPU: string;
+	//How much Random Access Memory does the computer have?
 	RAM: string;
+	//How much storage does the hard drive have?
 	HDD: string;
-	asset: Asset;
+	//The general Asset information relayed from the Asset model.
+	Asset: Asset;
 		
 	constructor(
 		
@@ -19,9 +25,8 @@ export class Computer {
 		CPU: string,
 		RAM: string,
 		HDD: string,
-		asset: Asset,
-     
-			)
+		Asset: Asset
+	)
 
 	 {
 	 
@@ -31,8 +36,7 @@ export class Computer {
 	 	this.CPU = CPU;
 	 	this.RAM = RAM;
 	 	this.HDD = HDD;
-	 	this.asset = asset;
-
+	 	this.Asset = Asset;
 	 	
 	 	}
 
