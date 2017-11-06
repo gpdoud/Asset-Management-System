@@ -1,0 +1,65 @@
+<menu-comp></menu-comp>
+<div class="MainContent form-horizontal" style="text-align: center;">
+<div class="pageTitle"><span>Computer Add</span></div>
+<div id="addEditForm2Columns"> 
+<form>
+	<div>
+		<div class='form-group'>
+			<label class='col-md-2 control-label' for="computer-modelnumber">Model Number</label>
+			<div class='col-md-4'>
+				<input class='form-control' name='ModelNumber' type='text' id='computer-modelnumber' 
+				[(ngModel)]='computer.ModelNumber' placeholder="Model Number">
+   			</div>
+			<label class='col-md-2 control-label' for="computer-serialnumber">Serial Number</label>
+			<div class='col-md-4'>
+				<input class='form-control' name='SerialNumber' type='text' id='computer-serialnumber' 
+				[(ngModel)]='computer.SerialNumber' placeholder="Serial Number">
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label class='col-md-2 control-label' for="computer-operatingsystem">Operating System</label>
+			<div class='col-md-4'>
+				<input class='form-control' name='OperatingSystem' type='text' id='computer-operatingsystem' 
+				[(ngModel)]='computer.OperatingSystem' placeholder="Operating System">
+   			</div>
+			<label class='col-md-2 control-label' for="computer-cpu">CPU</label>
+			<div class='col-md-4'>
+				<input class='form-control' name='CPU' type='text' id='computer-cpu' 
+				[(ngModel)]='computer.CPU' placeholder="CPU">
+			</div>
+		</div>
+
+		<div class='form-group' >
+			<label class='col-md-2  control-label' for="computer-ram">RAM</label>
+			<div class='col-md-4'>
+				<input class='form-control' name='RAM' type='text' id='computer-ram' 
+				[(ngModel)]='computer.RAM' placeholder="RAM">
+			</div>
+			<label class='col-md-2  control-label' for="computer-hdd">HDD</label>
+			<div class='col-md-4'>
+				<input class='form-control' name='HDD' type='text' id='computer-hdd' 
+				[(ngModel)]='computer.HDD' placeholder="HDD">
+			</div>
+		</div>	
+
+	</div>
+
+
+	<!-- <div class='form-group'>
+		<label class='col-md-10 col-md-offset-1 text-left'>{{message}}&nbsp;</label>
+	</div> -->
+</form>
+</div>
+</div>
+
+<!-- <p>{{computer | json}}</p> -->
+
+<app-asset-child-add [asset]="computer.Asset"></app-asset-child-add>
+<div class='form-group'>
+		<button (click)='add()' id='add' class='col-md-4 col-md-offset-4 btn btn-primary'>Add</button>
+</div>
+<!-- Line breaks to give users room between the button and their taskbar -->
+<br>
+<br>
+<br>

@@ -1,11 +1,11 @@
 <menu-comp></menu-comp>
-<div class="MainContent form-horizontal firstDivAddEditList">
+<div id="firstDivAddEditList" class="MainContent form-horizontal">
 
 	<div class="pageTitle">
-		<span><h1>Locations</h1></span>
+		<span>Locations</span>
 		<button type="button" class="btn btn-primary" routerLink="/locations/add">Add New</button></div>
 		<!-- *ngIf looks at variable "locations" in component; if null, table remains unfilled, once table is populated, it fills -->
-	<div>
+	<div id="table">
 	<table class="table" *ngIf="locations">
 		<tr>
 			<th>Name</th>

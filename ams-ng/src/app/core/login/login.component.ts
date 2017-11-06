@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
 			this.user = users[0];
 			this.SystemSvc.setLoggedIn(this.user);
 			console.log("Set SystemSvc logged in user to ", this.SystemSvc.loggedInUser);
-			this.router.navigateByUrl("/home");
+			this.router.navigateByUrl("/assets");
 		}
 		else {
 			this.message = "USER NAME AND/OR PASSWORD NOT FOUND";

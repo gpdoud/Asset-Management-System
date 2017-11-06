@@ -28,6 +28,7 @@ import { UserService } from './shared/services/user.service';
 import { LocationService } from './shared/services/location.service';
 import { ComputerService } from './shared/services/computer.service';
 
+import {AssetAddComponent} from './core/asset/asset-add/asset-add.component';
 import {AssetListComponent} from './core/asset/asset-list/asset-list.component';
 import {AssetDetailComponent} from './core/asset/asset-detail/asset-detail.component';
 import { AssetSearchComponent } from './core/asset/asset-search/asset-search.component';
@@ -46,6 +47,10 @@ import { LocationAddComponent } from './core/location/location-add/location-add.
 import { AssetChildDetailComponent } from './core/asset-child/asset-child-detail/asset-child-detail.component';
 import { ComputerDetailComponent } from './core/computer/computer-detail/computer-detail.component';
 
+import { AssetChildAddComponent } from './core/asset-child/asset-child-add/asset-child-add.component';
+import { AssetChildDetailComponent } from './core/asset-child/asset-child-detail/asset-child-detail.component';
+
+import { ComputerAddComponent } from './core/computer/computer-add/computer-add.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +61,7 @@ import { ComputerDetailComponent } from './core/computer/computer-detail/compute
     MenuComponent,
     LoginComponent,
     HelpComponent,
+    AssetAddComponent,
     AssetListComponent,
     AssetDetailComponent,
     AssetSearchComponent,
@@ -70,6 +76,8 @@ import { ComputerDetailComponent } from './core/computer/computer-detail/compute
     LocationAddComponent,
     ComputerDetailComponent,
     AssetChildDetailComponent,
+    AssetChildAddComponent,
+    ComputerAddComponent
   ],
   imports: [
     BrowserModule,

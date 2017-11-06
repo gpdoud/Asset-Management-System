@@ -1,10 +1,10 @@
 <menu-comp></menu-comp>
-<div class="MainContent form-horizontal firstDivAddEditList">
+<div id="firstDivAddEditList" class="MainContent form-horizontal">
 
-	<div class="pageTitle"><div><span><h2>Add Location</h2></span></div>
+	<div class="pageTitle"><span>Add Location</span></div>
 
-	<form class="addEditForm" *ngIf="location">
-
+	<div class="addEditDiv">
+	<form id="addEditForm" *ngIf="location">
 	<div class='form-group' >
 		<label class='col-md-3  control-label' for="location-name">Name</label>
 		<div class='col-md-9'>
@@ -53,7 +53,7 @@
 		</div>
 	</div>
 
-	<div class='form-group'>
+	<div class='text-center'>
 		<button (click)='add()' id='add' type="button" class='col-md-11 col-md-offset-1 btn btn-primary'>Add</button>
 	</div>
 
