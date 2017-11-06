@@ -48,6 +48,7 @@ body {
 div.pageTitle span {
 
 	font-size: 35pt;
+	float: none;
 }
 
 div.pageTitle button {
