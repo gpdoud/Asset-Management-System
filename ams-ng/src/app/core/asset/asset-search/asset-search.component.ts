@@ -31,6 +31,7 @@ export class AssetSearchComponent implements OnInit {
 		this.AssetSvc.location = this.location;
 		this.router.navigate(['/assets/search-list']);  
 	}
+	
   constructor(private AssetSvc: AssetService, private LocationSvc: LocationService, private router: Router) { }
 
   ngOnInit() {

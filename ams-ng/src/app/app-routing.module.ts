@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+//Let's import the components that we need to route
+
 import { HomeComponent } from './core/home/home.component';
 import { AboutComponent } from './core/about/about.component';
 import { HelpComponent } from './core/help/help.component';
@@ -27,7 +29,11 @@ import { LocationAddComponent } from './core/location/location-add/location-add.
 import { ComputerAddComponent } from './core/computer/computer-add/computer-add.component';
 
 const approutes: Routes = [
-	{ path: '', redirectTo: '/', pathMatch: "full" },
+	//Here is our routing
+
+  { path: '', redirectTo: '/', pathMatch: "full" },
+  //When the user adds the item in the path to http://localhost:4200
+  //the user is taken to the page created by that component
 	{ path: 'about', component: AboutComponent },
 	{ path: 'help', component: HelpComponent },
 	{ path: 'home', component: HomeComponent },
@@ -48,8 +54,11 @@ const approutes: Routes = [
   { path: "locations/detail/:id", component: LocationDetailComponent },
   { path: "locations/edit/:id", component: LocationEditComponent },
   { path: "locations/add", component: LocationAddComponent },
-  
+
   { path: "computers/add", component: ComputerAddComponent },
+  //If the user used the http://localhost:4200 address, but nothing
+  //after that matched our routes, we send them to the page created
+  //by the AssetListComponent
   { path: '**', component: AssetListComponent },
 ];
 

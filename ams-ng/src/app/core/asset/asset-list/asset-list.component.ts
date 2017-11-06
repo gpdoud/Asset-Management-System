@@ -12,13 +12,18 @@ import { AssetService } from '../../../shared/services/asset.service';
 })
 export class AssetListComponent implements OnInit {
 
-assets: Asset[];
+  assets: Asset[];
+  type: string = "";
   
-
 	getAssets(): void {
 		this.AssetSvc.list()
 			.then(resp => this.assets = resp);  //array of assets gets stored in this variable (resp)
 	}
+
+  filterAssets(): void {
+    this.AssetSvc.filterList(this.type)
+      .then(resp => this.assets = resp);  //array of assets gets stored in this variable (resp)
+  }
 
 
   constructor(private AssetSvc: AssetService) { }

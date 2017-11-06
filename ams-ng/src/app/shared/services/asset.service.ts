@@ -15,6 +15,7 @@ const url: string = urlBase + mvcCtrl;
 @Injectable()
 export class AssetService {
 
+  type: string = ""; //initializes variable "type"
   licenseplate: string;
   location: Location;
 
@@ -53,6 +54,15 @@ testAsset: Asset[];
            .then(resp => resp.json() as Asset[])
            .catch(this.handleError);
        }
+
+    filterList(type: string): Promise<Asset[]> {
+        let parms = "?type=" + type;
+         return this.http.get(url+'List' + parms)
+           .toPromise()
+           .then(resp => resp.json() as Asset[])
+           .catch(this.handleError);
+       }
+
 
     get(id): Promise<Asset> {
          return this.http.get(url+'Get/'+id)

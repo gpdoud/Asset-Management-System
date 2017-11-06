@@ -70,5 +70,7 @@ div.pageTitle button {
 }
 
 .loginInputs {
-	display: block; width: 300px; margin: auto 0 auto;
+	display: block; 
+  width: 300px;
+  margin: auto 0 auto;
 }
