@@ -1,3 +1,7 @@
+body {
+	font-size: 14pt;
+}
+
 #table {
 	margin: 30px;
 	margin-top: 15px;
@@ -39,12 +43,7 @@
 }
 
 div.pageTitle span {
-	font-size: 37px;
-}
-
-div.pageTitle span #search {
-	font-size: 37px;
-	color: blue;
+	font-size: 35pt;
 }
 
 div.pageTitle button {
@@ -52,5 +51,26 @@ div.pageTitle button {
 	margin-left: auto;
     margin-right: auto;
     margin-bottom: 0px;
-	;
+}
+
+#loginDiv  {
+	width:28%; 
+	border: 1px solid silver; 
+	margin: 0 auto; 
+	padding: 10px 0;
+}
+
+#loginText {
+	font-size: 25pt;
+}
+
+#welcomeText {
+	font-size: 35pt;
+	text-align: center;
+}
+
+.loginInputs {
+	display: block; 
+  width: 300px;
+  margin: auto 0 auto;
 }
