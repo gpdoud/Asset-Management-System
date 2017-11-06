@@ -23,7 +23,7 @@ export class ComputerAddComponent implements OnInit {
 	asset: Asset = new Asset (0, '', '', new Date(), '', 0, new Date(), new Date(), 
 		new Date(), new Date(), 0, '', '', null, 0, null);
 	//ModelNumber, SerialNumber, OperatingSystem, CPU, RAM, HDD
-	computer: Computer = new Computer ('', '', 'Windows 10', '', '', '', this.asset); 
+	computer: Computer = new Computer (0,'', '', 'Windows 10', '', '', '', this.asset); 
 	
 	add() {
 		console.log("computer-add add()");

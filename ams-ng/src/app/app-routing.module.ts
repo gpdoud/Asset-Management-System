@@ -29,7 +29,7 @@ import { LocationAddComponent } from './core/location/location-add/location-add.
 import { AssetChildDetailComponent } from './core/asset-child/asset-child-detail/asset-child-detail.component';
 
 import { ComputerDetailComponent } from './core/computer/computer-detail/computer-detail.component';
-
+import { ComputerAddComponent } from './core/computer/computer-add/computer-add.component';
 
 const approutes: Routes = [
 	//Here is our routing
