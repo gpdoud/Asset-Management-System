@@ -51,7 +51,8 @@
 		<td>{{asset.Location.Name}}</td>
 		<td>{{asset.PhotoPath}}</td>
 		<td>
-			<a routerLink="/assets/detail/{{asset.Id}}">Detail/Edit</a>
+			<a *ngIf="asset.Type == 'Vehicle'" routerLink="/assets/detail/{{asset.Id}}">Detail/Edit</a>
+			<a *ngIf="asset.Type == 'Computer'" routerLink="/computers/detail/{{asset.Id}}">Detail/Edit</a>
 		</td>
 	</tr>
 	</table>

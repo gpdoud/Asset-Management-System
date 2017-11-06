@@ -1,3 +1,6 @@
+body {
+	font-size: 14pt;
+}
 
 #table {
 	margin: 30px;
@@ -8,11 +11,6 @@
 	margin-left: auto;
 	margin-right:auto;
 	margin-top: 10px;
-}
-
-
-body {
-	font-size: 14pt;
 }
 
 #addEditForm { 
@@ -31,7 +29,6 @@ body {
 	border: 1px solid silver; 
 }
 
-
 .addEditDiv {
 	text-align: center;
 	display: block;
@@ -46,7 +43,6 @@ body {
 }
 
 div.pageTitle span {
-
 	font-size: 35pt;
 	float: none;
 }
@@ -76,7 +72,6 @@ div.pageTitle button {
 }
 
 .loginInputs {
-
     display: block; 
     width: 300px;
     margin: auto 0 auto;
@@ -95,8 +90,4 @@ div.pageTitle button {
 
 #centerDivAssetList {
 	text-align: center;
-	display: block; 
-  width: 300px;
-  margin: auto 0 auto;
-
 }
