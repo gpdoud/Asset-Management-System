@@ -48,7 +48,7 @@ import { AssetChildDetailComponent } from './core/asset-child/asset-child-detail
 import { ComputerDetailComponent } from './core/computer/computer-detail/computer-detail.component';
 
 import { AssetChildAddComponent } from './core/asset-child/asset-child-add/asset-child-add.component';
-import { AssetChildDetailComponent } from './core/asset-child/asset-child-detail/asset-child-detail.component';
+
 
 import { ComputerAddComponent } from './core/computer/computer-add/computer-add.component';
 
