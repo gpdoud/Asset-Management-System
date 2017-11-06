@@ -19,7 +19,7 @@ import { ComputerService } from '../../../shared/services/computer.service';
 export class ComputerDetailComponent implements OnInit {
 
 	computer: Computer;
-  assets: Asset[];
+  //assets: Asset[];
 
 	/*remove() {
     console.log("remove()");
@@ -31,7 +31,8 @@ export class ComputerDetailComponent implements OnInit {
   } */
 
  	update() {
-		this.ComputerSvc.change(this.computer).then(
+     this.computer.Asset.Location = null; //set to null to work around bug in backend - updating location id instead of location object
+		 this.ComputerSvc.change(this.computer).then(
 			resp => {
 				console.log(resp);
 				this.router.navigate(['/assets']);
