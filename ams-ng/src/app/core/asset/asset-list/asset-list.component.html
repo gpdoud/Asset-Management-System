@@ -1,14 +1,10 @@
 <menu-comp></menu-comp>
+
 <div id="firstDivAddEditList" class ="MainContent form-horizontal">
 
-	<div class="pageTitle">
-		<span>Assets</span>
-	  		<button id='search' class='btn btn-info' routerLink="/assets/search">Search</button>
-	  		 	<!-- binds variable "type" to value of select; then calls filterAssets() when "type" changes-->
- <div class="form-group">
- 	<div id="filter" class="col-md-3">
+ <div id="filter" class="threeDivs col-md-3">
  		<label class='col-md-3  control-label' for="filter">Filter</label>
-		<div class="col-md-8">
+		<div class="threeDivs col-md-10">
 				<!-- [(ngModel)] stores value of selected option inside variable "type" -->
 				<!-- events like (change) and (onClick) go inside parentheses-->
 			<select id="filter" class="form-control" [(ngModel)]="type" (change)="filterAssets()">
@@ -16,9 +12,25 @@
 			<option value="Vehicle">Vehicles</option>
       		<option value="Computer">Computers</option>
 			</select>
-		</div>
+			</div>
+
+
+			<span *ngIf="type == 'Vehicle'">
+				<button class='assetButton btn btn-primary' routerLink="/assets/add">Add Vehicle</button>
+			</span>
+
+			<span *ngIf="type == 'Computer'">
+	  			<button class='assetButton btn btn-primary' routerLink="/computers/add">Add Computer</button>
+			</span>	
+			</div>
+	
+	<div id="centerDivAssetList" class="threeDivs pageTitle">
+		<span>Assets</span>
+	  	<button id='search' class='btn btn-info' routerLink="/assets/search">Search</button>
+	  		 	<!-- binds variable "type" to value of select; then calls filterAssets() when "type" changes-->
 	</div>
-	</div></div>
+
+	<div class="threeDivs"></div>
 
 	<div id ="table">
 	<table class="table" *ngIf="assets">
