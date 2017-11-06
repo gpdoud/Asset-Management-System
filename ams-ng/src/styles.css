@@ -53,6 +53,7 @@ div.pageTitle button {
     margin-bottom: 0px;
 }
 
+
 #loginDiv  {
 	width:28%; 
 	border: 1px solid silver; 
@@ -70,7 +71,22 @@ div.pageTitle button {
 }
 
 .loginInputs {
-	display: block; 
-  width: 300px;
-  margin: auto 0 auto;
+    display: block; 
+    width: 300px;
+    margin: auto 0 auto;
+}
+
+.filter {
+	display: inline;
+	float: left;
+	margin-top: 10px;
+}
+
+.threeDivs {
+	display: inline-block;
+	width: 33%;
+}
+
+#centerDivAssetList {
+	text-align: center;
 }
