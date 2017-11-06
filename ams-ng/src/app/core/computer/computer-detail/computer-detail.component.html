@@ -1,0 +1,65 @@
+<menu-comp></menu-comp>
+<div id="firstDivAddEditList" class="MainContent form-horizontal">
+    
+    <div class="pageTitle"><span>Computer Detail</span>
+		</div>
+
+	<div class="addEditDiv"> 
+	<form id="addEditForm2Columns" *ngIf="computer">  
+		<div class='form-group'>
+		<label class='col-md-2 control-label' for="computer-modelnumber">Model Number</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='ModelNumber' type= 'text' id='computer-modelnumber' [(ngModel)]='computer.ModelNumber' placeholder="ModelNumber"> </div>
+		<label class='col-md-2 control-label' for="computer-serialnumber">Serial Number</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='SerialNumber' type= 'text'
+			 id='computer-serialnumber'
+			[(ngModel)]='computer.SerialNumber' placeholder="SerialNumber">
+		</div>
+		</div>
+	
+	<div class='form-group'>
+		<label class='col-md-2 control-label' 
+		for="computer-operatingsystem">Operating System</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='OperatingSystem' type= 'text'
+			 id='computer-operatingsystem'
+			[(ngModel)]='computer.OperatingSystem' placeholder="OperatingSystem">
+		</div>
+
+		<label class='col-md-2 control-label' for="computer-cpu">CPU</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='CPU' type= 'text' id='computer-CPU'
+			[(ngModel)]='computer.CPU' placeholder="CPU">
+		</div>
+	</div>
+
+	
+	<div class='form-group'>
+		<label class='col-md-2 control-label' for="computer-RAM">RAM</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='RAM' type= 'text' id='computer-RAM'
+			[(ngModel)]='computer.RAM' placeholder="RAM">
+		</div>
+
+		<label class='col-md-2 control-label' for="computer-HDD">HDD</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='HDD' type= 'text' id='computer-HDD'
+			[(ngModel)]='computer.HDD' placeholder="HDD">
+		</div>
+	</div>
+	</form>
+
+	</div>
+</div>
+
+
+<app-asset-child-detail *ngIf="computer" [asset]= "computer.Asset"> </app-asset-child-detail>
+<div class="text-center">
+		<button (click)='update()' id='update' class='col-md-4 col-md-offset-4 btn btn-warning'>Update</button> 
+		<!-- <button (click)="remove()" class="col-md-5 col-md-offset-1 btn btn-danger">Delete</button> -->
+	</div>
+
+	<div class='form-group'>
+		<label class='col-md-10 col-md-offset-1 text-left'>{{message}}&nbsp;</label>
+	</div>

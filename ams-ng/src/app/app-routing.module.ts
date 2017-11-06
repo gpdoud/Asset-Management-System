@@ -26,7 +26,10 @@ import { LocationDetailComponent } from './core/location/location-detail/locatio
 import { LocationEditComponent } from './core/location/location-edit/location-edit.component';
 import { LocationAddComponent } from './core/location/location-add/location-add.component';
 
-import { ComputerAddComponent } from './core/computer/computer-add/computer-add.component';
+import { AssetChildDetailComponent } from './core/asset-child/asset-child-detail/asset-child-detail.component';
+
+import { ComputerDetailComponent } from './core/computer/computer-detail/computer-detail.component';
+
 
 const approutes: Routes = [
 	//Here is our routing
@@ -44,6 +47,8 @@ const approutes: Routes = [
   { path: 'assets/detail/:id', component: AssetDetailComponent},
    { path: 'assets/search', component: AssetSearchComponent},
   { path: 'assets/search-list', component: AssetSearchListComponent},
+
+  { path: 'asset-childs/detail/:id', component: AssetChildDetailComponent},
   
   { path: "users", component: UserListComponent },
   { path: "users/detail/:id", component: UserDetailComponent },
@@ -55,6 +60,8 @@ const approutes: Routes = [
   { path: "locations/edit/:id", component: LocationEditComponent },
   { path: "locations/add", component: LocationAddComponent },
 
+
+  { path: "computers/detail/:id", component: ComputerDetailComponent },
   { path: "computers/add", component: ComputerAddComponent },
   //If the user used the http://localhost:4200 address, but nothing
   //after that matched our routes, we send them to the page created
