@@ -3,22 +3,23 @@
 
 	<div class="pageTitle">
 		<span>Assets</span>
-		<!-- <button id='add' class='btn btn-primary' routerLink="/assets/add">Add New</button> -->
 	  		<button id='search' class='btn btn-info' routerLink="/assets/search">Search</button>
-  </div>
- 
-<!--  <div class="form-group">
+	  		 	<!-- binds variable "type" to value of select; then calls filterAssets() when "type" changes-->
+ <div class="form-group">
  	<div id="filter" class="col-md-3">
-  		<label>Asset Type</label></div>
-		<div class="col-md-4">
-			<select class="form-control" ng-model="selectedType" ng-options="">
-			<option value="computer">Vehicle</option>
-			<option value="computer">Vehicle</option>
-      		<option value="computer">Computer</option>
+ 		<label class='col-md-3  control-label' for="filter">Filter</label>
+		<div class="col-md-8">
+				<!-- [(ngModel)] stores value of selected option inside variable "type" -->
+				<!-- events like (change) and (onClick) go inside parentheses-->
+			<select id="filter" class="form-control" [(ngModel)]="type" (change)="filterAssets()">
+			<option value="">All</option> <!-- when type="" is passed, all data is displayed -->
+			<option value="Vehicle">Vehicles</option>
+      		<option value="Computer">Computers</option>
 			</select>
 		</div>
 	</div>
- -->
+	</div></div>
+
 	<div id ="table">
 	<table class="table" *ngIf="assets">
 	<tr>
