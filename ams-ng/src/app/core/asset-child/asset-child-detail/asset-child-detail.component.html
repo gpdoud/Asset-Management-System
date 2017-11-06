@@ -1,14 +1,12 @@
 <!-- This is the HTML to display the general Asset information -->
+
 <div class="MainContent form-horizontal" style="text-align: center;">
-  <div>
-    <span class="pageTitle"><h2>Asset Detail</h2></span>
-    <!-- At the moment, add does not add to the database, so we have disable this button for now -->
-    <!-- <button id='add' class='btn btn-primary' routerLink="/assets/add">Add New</button> -->
-  </div>
-
-  <div class="firstDivAddEditList">
-
-    <form *ngIf="asset" class="addEditForm">
+<span class="pageTitle">Asset Detail</span>
+<div id="firstDivAddEditList" class="MainContent form-horizontal">
+  
+  <div class="addEditDiv">
+    
+    <form id="addEditForm2Columns" *ngIf="asset">
 
       <div class='form-group'>
         <label class='col-md-2 control-label' for="asset-name">Name</label>

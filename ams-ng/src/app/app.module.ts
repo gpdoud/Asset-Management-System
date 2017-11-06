@@ -44,6 +44,8 @@ import { LocationListComponent } from './core/location/location-list/location-li
 import { LocationDetailComponent } from './core/location/location-detail/location-detail.component';
 import { LocationEditComponent } from './core/location/location-edit/location-edit.component';
 import { LocationAddComponent } from './core/location/location-add/location-add.component';
+import { AssetChildDetailComponent } from './core/asset-child/asset-child-detail/asset-child-detail.component';
+import { ComputerDetailComponent } from './core/computer/computer-detail/computer-detail.component';
 
 import { AssetChildAddComponent } from './core/asset-child/asset-child-add/asset-child-add.component';
 import { AssetChildDetailComponent } from './core/asset-child/asset-child-detail/asset-child-detail.component';
@@ -72,8 +74,9 @@ import { ComputerAddComponent } from './core/computer/computer-add/computer-add.
     LocationEditComponent,
     LocationDetailComponent,
     LocationAddComponent,
-    AssetChildAddComponent,
+    ComputerDetailComponent,
     AssetChildDetailComponent,
+    AssetChildAddComponent,
     ComputerAddComponent
   ],
   imports: [
@@ -90,8 +93,7 @@ import { ComputerAddComponent } from './core/computer/computer-add/computer-add.
       SystemService,
       AssetService,
       LocationService,
-      ComputerService
-      ],
+      ComputerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
